@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Kali Orientation</title>
+    <difficulty>0</difficulty>
+    <category>Informational</category>
+    <name>get_started_kali</name>
+    <dependencies></dependencies>
+    <shortdescription>Orientation of the Kali OS and Metasploit Interfaces</shortdescription>
+    <description>This exercise is meant to get you oriented with Kali Linux and the Meterpreter framework. Understanding how to utilize the meterpreter interfaces will be key to starting and completing the metasploit exploit exercises.</description>
+    <tutorial>&lt;h3&gt;&amp;nbsp;To acces the Kali workstation:&lt;/h3&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;ssh (via putty)&amp;nbsp;to 192.20.128.11&amp;nbsp;with creds:&amp;nbsp;root | P@ssw0rd&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&lt;h3&gt;Overview of Meterpreter Interfaces&lt;/h3&gt;&#xD;
+&lt;p&gt;Kali Linux is based on a Debian OS, and comes loaded with numerious penetration testing tools. The open source Meterpreter Framework is included, which is used for conducting exploitation by both cyber actors, and professional penetration testers. The interfaces for communicating with the meterpreter framework is msfconsole, Armitage, and msfcli.&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Armitage -- GUI interface that provides an easy way to interface with the meterpreter framework.&lt;/li&gt;&#xD;
+&lt;li&gt;msfconsole -- used via command line. Primarily used to manage the Metasploit database, manage sessions, and configure and launch Metasploit modules. used via the command line prompt "msf&amp;gt;". We will primarily use this interface.&lt;/li&gt;&#xD;
+&lt;li&gt;msfcli -- a command line interface used for testing/writing a new exploit, using scripts, and applying basic automation tasks. Example usage for launching an exploit: msfcli [path to exploit][options = value].&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;h3&gt;Getting Familiar with msfconsole&lt;/h3&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;Launch msfconsole via command line command: msfconsole&lt;/li&gt;&#xD;
+&lt;li&gt;Some commands that will be helpful to you are:&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;search linux -- searches for all available Linux modules. With metasploit versions updating constantly, it's good practice to use the search command to ensure you have the right path for the module you want to load.&lt;/li&gt;&#xD;
+&lt;li&gt;use -- use command sets the module you want to use. Ex: use auxiliary/analyze/jtr_linux&lt;/li&gt;&#xD;
+&lt;li&gt;show options -- displays the options available for the selected module you loaded.&lt;/li&gt;&#xD;
+&lt;li&gt;set-- sets the option for the module selected.&lt;/li&gt;&#xD;
+&lt;li&gt;exploit -- executes the exploit module selected.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <video>https://www.youtube.com/embed/lZlqr2PFJIo</video>
+    <question>
+      <text>What is an available option for John the Ripper Linux Password Cracker module: auxiliary/analyze/jtr_linux ?</text>
+      <type>multiple</type>
+      <answer>JOHN_PATH</answer>
+      <wrong>JOHN_LIST</wrong>
+    </question>
+    <question>
+      <text>What module would you use to get network information on a Linux OS?</text>
+      <type>multiple</type>
+      <answer>post/linux/gather/enum_network</answer>
+      <wrong>post/linux/gather/enum_system</wrong>
+    </question>
+    <question>
+      <text>What msfconsole command will display the available commands you can use?</text>
+      <type>multiple</type>
+      <answer>help</answer>
+      <wrong>man msfconsole</wrong>
+    </question>
+  </exercise>
+</exercises>

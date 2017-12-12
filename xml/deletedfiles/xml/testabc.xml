@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>testabc</title>
+    <difficulty>0</difficulty>
+    <category>Informational</category>
+    <name>testabc</name>
+    <dependencies></dependencies>
+    <shortdescription>testabc</shortdescription>
+    <description>testabc</description>
+    <tutorial>&lt;p&gt;testabc&lt;/p&gt;</tutorial>
+    <question>
+      <text>testabc</text>
+      <type>multiple</type>
+      <answer>testabc</answer>
+      <wrong>testabc</wrong>
+      <wrong>testabc</wrong>
+      <wrong>testabc</wrong>
+    </question>
+  </exercise>
+</exercises>

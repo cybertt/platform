@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>test666</title>
+    <difficulty>0</difficulty>
+    <name>test666</name>
+    <shortdescription>test</shortdescription>
+    <description>test</description>
+    <tutorial>&lt;p&gt;gffdg&lt;/p&gt;</tutorial>
+    <question>
+      <text>dfdsf</text>
+      <answer>sdfsdf</answer>
+      <wrong>sdfs</wrong>
+      <wrong>fdfsd</wrong>
+      <wrong>fsdf</wrong>
+    </question>
+    <question>
+      <text>fsdfsd</text>
+      <answer>sdfdsfdsf</answer>
+      <wrong>sdfsdf</wrong>
+      <wrong>fsdfsd</wrong>
+      <wrong>fdsfsdf</wrong>
+    </question>
+  </exercise>
+</exercises>

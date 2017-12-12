@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Malicious Traffic Analysis - Part 3</title>
+	<dependencies>parse_google_news, base64_decoder, word_frequency, echo_client_server, collateral_duty_script</dependencies>
+    <difficulty>2</difficulty>
+	<category>analysis</category>
+    <name>mnta_p3</name>
+    <shortdescription>Analyze a pcap for reconnaissance/attacks done against a network.</shortdescription>
+    <description>Analyze a pcap to figure out what reconnaissance and attacks were done against a network.</description>
+    <tutorial>&lt;p&gt;This morning when you arrived you checked your email. There were several email alerts in your inbox from last night around 10pm CST. All the alerts have to do with Reconnaissance traffic from the GW router going to your new DMZ. It's your baby so check it out and discover if any BadGuys got information they shouldn't have.&lt;/p&gt;&#xD;
+&lt;p&gt;The company owns one public IP address at:&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;97.79.144.37&lt;/li&gt;&#xD;
+&lt;li&gt;The router at 97.79.144.37 is doing port forwarding into the DMZ and address translation for the Workstation LAN.&lt;/li&gt;&#xD;
+&lt;li&gt;The company has installed load balancing Windows and Linux Virtual Servers.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;Analyze the PCAP using Wireshark and answer the questions below.&lt;/p&gt;</tutorial>
+    <question>
+      <text>What was the IP address for the attacker from Dublin, Ireland?</text>
+      <type>shortanswer</type>
+      <answer>91.220.45.72</answer>
+    </question>
+    <question>
+      <text>What was the IP address for the attacker from Fuzhou, China?</text>
+      <type>shortanswer</type>
+      <answer>58.22.16.5</answer>
+    </question>
+    <question>
+      <text>What is the address of the primary attacker?</text>
+      <type>shortanswer</type>
+      <answer>39.45.78.61</answer>
+    </question>
+    <question>
+      <text>What well-known ports were found open in the DMZ? answer format: "11, 12, 13, 14"---make sure to put a space after the commas.</text>
+      <type>shortanswer</type>
+      <answer>80, 110, 22, 25, 21, 26</answer>
+    </question>
+    <question>
+      <text>What Microsoft-IIS version was found from the banner grab of http?</text>
+      <type>shortanswer</type>
+      <answer>6.0</answer>
+    </question>
+  </exercise>
+</exercises>

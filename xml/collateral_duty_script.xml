@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Collateral Duty Script</title>
+    <difficulty>3</difficulty>
+    <category>Programming</category>
+    <name>collateral_duty_script</name>
+    <dependencies></dependencies>
+    <shortdescription>Use Python to make your collateral duty less draining on your time.</shortdescription>
+    <description>Use Python to make your collateral duty less draining on your time.</description>
+    <tutorial>&lt;p&gt;Pretend your the chair of the IW command collateral. Every week you receive emails from a Master Chief, Senior Chief, or Chief telling you:&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Members who sat a board.&lt;/li&gt;&#xD;
+&lt;li&gt;IW candidates taking the board.&lt;/li&gt;&#xD;
+&lt;li&gt;The result for each candidate.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;You have to compile all of these emails by the end of the week, update the count of how many boards each IW board member has sat, and send to N1 admin.&lt;/p&gt;&#xD;
+&lt;p&gt;Your task is to compile these emails automatically with a Python script, and draft an email ready for you to send.&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Names should be formated as follows: Rank(IW/SW/AW/EW) Last Name, First Name&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Ex: CTNC(IW) Doe, John&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;Use the directory path for where the attachments are stored as a command line argument for the script.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;To get you started, there is an example of an email in the share drive on your defensive workstation. To truly test if it works, try it out with someone else in your division.&lt;/p&gt;&#xD;
+&lt;p&gt;Hint: Create a dictionary of full names of people you will interact with. This will come in handy if someone doesn't include their full name in an email.&lt;/p&gt;&#xD;
+&lt;p&gt;Email your code to the Adelphi Training Team at adelphi-training-team@googlegroups.com for code review when you are finished.&lt;/p&gt;</tutorial>
+    <question>
+      <text>Did you test your script successfully with someone else in your division?</text>
+      <type>multiple</type>
+      <answer>yes</answer>
+      <wrong>no</wrong>
+    </question>
+    <question>
+      <text>Take a screenshot of your code compiling successfully, of the email it creates and upload the screenshot</text>
+      <type>upload</type>
+      <answer>Yes</answer>
+    </question>
+  </exercise>
+</exercises>

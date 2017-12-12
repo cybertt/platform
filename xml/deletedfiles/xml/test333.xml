@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>test333</title>
+    <difficulty>0</difficulty>
+    <category>Informational</category>
+    <name>test333</name>
+    <dependencies></dependencies>
+    <shortdescription></shortdescription>
+    <description>test333</description>
+    <tutorial>&lt;p&gt;test333&lt;/p&gt;</tutorial>
+    <question>
+      <text>test333</text>
+      <type>multiple</type>
+      <answer>test333</answer>
+      <wrong>sdfsdf</wrong>
+      <wrong>sdfdsf</wrong>
+      <wrong>sdfsd</wrong>
+    </question>
+  </exercise>
+</exercises>

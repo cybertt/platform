@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Router Config 1</title>
+    <difficulty>1</difficulty>
+    <category>CND</category>
+    <name>router_config_1</name>
+    <dependencies></dependencies>
+    <shortdescription>Refresher on Router Configurations</shortdescription>
+    <description>Refresher on comprehending a router configuration.</description>
+    <tutorial>&lt;p&gt;Given three separate router configurations, construct a network map connecting all three devices to the internet. The map must include hostnames, interface labels and IP addresses.&lt;/p&gt;&#xD;
+&lt;p&gt;On the defensive workstation, the configs are in the share in the Networking folder under Router_Config_1.&lt;/p&gt;&#xD;
+&lt;p&gt;Please answer the questions below and upload your netmap at the bottom.&lt;/p&gt;</tutorial>
+    <question>
+      <text>What routing protocol is being used?</text>
+      <type>shortanswer</type>
+      <answer>RIP Version 2</answer>
+    </question>
+    <question>
+      <text>Using the configuration for R1, subnet interface Ethernet0/1, what is the IP Address Range? Example Answer: 1.2.3.4 - 1.2.3.255 &#xD;
+</text>
+      <type>shortanswer</type>
+      <answer>209.165.200.224 &#x2013; 209.165.200.255</answer>
+    </question>
+    <question>
+      <text>Using the configuration for R1, subnet interface Ethernet0/1, what is the CIDR? Answer in the format '/24' or '/25'</text>
+      <type>shortanswer</type>
+      <answer>/27</answer>
+    </question>
+    <question>
+      <text>Using the configuration for R1, subnet interface Ethernet0/1, what is the IP of the first host?</text>
+      <type>shortanswer</type>
+      <answer>209.165.200.225</answer>
+    </question>
+    <question>
+      <text>Using the configuration for R1, subnet interface Ethernet0/1, what is the IP of the last host?</text>
+      <type>shortanswer</type>
+      <answer>209.165.200.254</answer>
+    </question>
+    <question>
+      <text>Using the configuration for R1, subnet interface Ethernet0/1, what is the subnet?</text>
+      <type>shortanswer</type>
+      <answer>209.165.200.224</answer>
+    </question>
+    <question>
+      <text>Using the configuration for R1, subnet interface Ethernet0/1, what is the broadcast?</text>
+      <type>shortanswer</type>
+      <answer>209.165.200.255</answer>
+    </question>
+    <question>
+      <text>Using the configuration for R1, subnet interface Ethernet0/1, how many hosts are there?</text>
+      <type>shortanswer</type>
+      <answer>30</answer>
+    </question>
+    <question>
+      <text>Using the configuration for R3, how many virtual terminal lines exist?</text>
+      <type>shortanswer</type>
+      <answer>5</answer>
+    </question>
+    <question>
+      <text>Using the configuration for R2, enter the sub-interfaces that exist on interface Ethernet0/2. Enter them below with each interface on its own line in numerical order. Example below:&#xD;
+Ethernet0/1.1&#xD;
+Ethernet0/1.2&#xD;
+Ethernet0/1.3&#xD;
+Ethernet0/1.4&#xD;
+</text>
+      <type>shortanswer</type>
+      <answer>Ethernet0/2.1&#xD;
+Ethernet0/2.10&#xD;
+Ethernet0/2.20&#xD;
+Ethernet0/2.40</answer>
+    </question>
+    <question>
+      <text>Using the configuration for R2, what are the usable IPs for interface Ethernet0/3? Separate the IP's with an 'and'.</text>
+      <type>shortanswer</type>
+      <answer>10.16.12.1 and 10.16.12.2</answer>
+    </question>
+    <question>
+      <text>Please take a screenshot of your network map and upload below.</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+  </exercise>
+</exercises>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>First Program</title>
+    <difficulty>1</difficulty>
+    <category>Programming</category>
+    <name>first_program</name>
+    <dependencies></dependencies>
+    <shortdescription>Write your first program in Python.</shortdescription>
+    <description>This exercise will get you oriented with Python and introduce you to various Python methods.</description>
+    <tutorial>&lt;p&gt;&lt;strong&gt;Intro&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;Welcome to Python! This is a great programming language to get started with that is very easy and very powerful. This exercise will not be your standard run of the mill bs &amp;ldquo;Hello, World!&amp;rdquo; first program. I will not insult your intelligence and instead will assume you are past that. So as with all of our exercises you will be required to do some research in the hopes of building self sufficiency and self confidence. Please take a look at the link I provide below and the video I provide to help you out. Let&amp;rsquo;s dive right in.&lt;/p&gt;&#xD;
+&lt;p&gt;Two quick facts about Python:&lt;/p&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;Everything in Python is an object. A string is an object, a class is an object, a module is an object, and so on. A object in Python is something that can be passed as an argument to a function and also something that can be a variable.&lt;/li&gt;&#xD;
+&lt;li&gt;Python is &lt;em&gt;white space &lt;/em&gt;delineated. This means that it interprets spaces and tabs as two completely different things. So be cognizant of this as you program.&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Helpful Link for an Overview of the Data Types:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;This link will provide a better overview of the data types than could ever be provided here. This will also be very useful to you for future python programming.&lt;/p&gt;&#xD;
+&lt;p&gt;https://www.tutorialspoint.com/python/python_variable_types.htm&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Helpful Video:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;This video below provides a great introduction to Python taught by Google. It is the first video in a series of five. I highly recommend watching all of them. If your leadership asks you why you&amp;rsquo;re watching YouTube videos instead of working, just tell them the exercise told you to do so.&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Exercise Task:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;Write a python program to take input from a user to build out basic recall information. Get the following information:&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;First Name&lt;/li&gt;&#xD;
+&lt;li&gt;Last Name&lt;/li&gt;&#xD;
+&lt;li&gt;Street Address&lt;/li&gt;&#xD;
+&lt;li&gt;City&lt;/li&gt;&#xD;
+&lt;li&gt;State&lt;/li&gt;&#xD;
+&lt;li&gt;Phone Number&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;After deciding on how to store that information, let&amp;rsquo;s do something useful with it. Have your program do the following below:&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Change the last names to all uppercase.&lt;/li&gt;&#xD;
+&lt;li&gt;Sort and display by last names.&lt;/li&gt;&#xD;
+&lt;li&gt;Count the total number of entries.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;Create 10 fake entries and submit your code below.&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;HINTS:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;Research the following:&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;upper()&lt;/li&gt;&#xD;
+&lt;li&gt;sort()&lt;/li&gt;&#xD;
+&lt;li&gt;count()&lt;/li&gt;&#xD;
+&lt;li&gt;print()&lt;/li&gt;&#xD;
+&lt;li&gt;input()&lt;/li&gt;&#xD;
+&lt;li&gt;raw_input()&lt;/li&gt;&#xD;
+&lt;li&gt;pprint()&lt;/li&gt;&#xD;
+&lt;li&gt;The differences between dictionaries, tuples, and lists.&lt;/li&gt;&#xD;
+&lt;/ul&gt;</tutorial>
+    <video>https://www.youtube.com/embed/tKTZoB2Vjuk</video>
+    <question>
+      <text>Upload a screenshot of your code here.</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+    <question>
+      <text>Upload a screenshot of your code working.</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+  </exercise>
+</exercises>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>SSH Tunneling</title>
+    <difficulty>2</difficulty>
+    <category>CNE</category>
+    <name>ssh_tunneling</name>
+    <dependencies>sql_injection</dependencies>
+    <shortdescription>Tunnel through a host using SSH</shortdescription>
+    <description>Tunnel through a host using SSH</description>
+    <tutorial>&lt;ol&gt;&#xD;
+&lt;li&gt;Use SQL injection on the target web server http://web.defense.net (described in a_beginner/sql_injection) to obtain the user account info on the central gateway (192.254.0.1) and the external DNS server (222.222.222.222)&lt;/li&gt;&#xD;
+&lt;li&gt;On your kali box, run ifconfig and note your ip address (192.20.128.11)&lt;/li&gt;&#xD;
+&lt;li&gt;Set up an ssh tunnel using the following syntax: ssh -f @ -L :: -N for our purposes, this would be: ssh -f vyos@192.254.0.1 -L 12345:222.222.222.222:22 -N enter the password for the central router obtained through SQL injection.&lt;/li&gt;&#xD;
+&lt;li&gt;Now that the tunnel is set up, run: netstat -an |less on your kali box and notice the listener open on 127.0.0.1:12345&lt;/li&gt;&#xD;
+&lt;li&gt;Now ssh to the target machine through your tunnel using the following syntax: ssh -p 12345 admin@127.0.0.1 enter the password for the external DNS server obtained through SQL injection.&lt;/li&gt;&#xD;
+&lt;li&gt;Answer yes to any prompts and wait a little while the prompt for c:users\admin&amp;gt; to show up, then run: netstat -an|more on the remote windows machine (external DNS server).&lt;/li&gt;&#xD;
+&lt;li&gt;Notice the connection on local address 222.222.222.222:22. Who is connected to that machine? Is it the same ip address as your kali box? It should be the ip address of the interface of the central router connected to the external DNS server. This is because you are sending all of your traffic through an encrypted tunnell running through the central router. Concept: by setting up an ssh tunnel through the vyos central router, you are able to make it look like all traffic you send to the external DNS server is actually coming from the central router. This is what the connection looks like: 192.20.128.11(127.0.0.1):12345 -&amp;gt; 192.254.0.1(central router):22 -&amp;gt; 222.222.222.221(central router):RHP -&amp;gt; 222.222.222.222(target):22 therfore: 192.20.128.11(127.0.0.1):12345 = 222.222.222.222:22 and 222.222.222.221:RHP = 192.20.128.11(127.0.0.1):12345&lt;/li&gt;&#xD;
+&lt;li&gt;Move onto the dns poisoning exercise.&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <video>https://www.youtube.com/embed/aDkpBWG5jYM</video>
+    <question>
+      <text>Android or Apple?</text>
+      <type>multiple</type>
+      <answer>Android</answer>
+    </question>
+  </exercise>
+</exercises>

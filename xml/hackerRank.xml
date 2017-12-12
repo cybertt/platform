@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>HackerRank 30 Days of Code</title>
+    <difficulty>0</difficulty>
+    <category>Programming</category>
+    <name>hackerRank</name>
+    <dependencies></dependencies>
+    <shortdescription>Python learning via HackerRank.com</shortdescription>
+    <description>Complete the 30 Days of Code challenge on HackerRank.com to quickly get you familiar with Python and fundamental programming concepts.</description>
+    <tutorial>&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;Login to your HackerRank account and complete the 30 Days of Code Challenge. &lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;Credentials:&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="font: 400 14.66px/1.38 Calibri; color: #000000; padding-left: 30px; text-decoration: none; margin-top: 0pt; margin-bottom: 0pt; vertical-align: baseline; list-style-type: disc; background-color: transparent;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;Username: 'emailusername'&amp;nbsp;_n57&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="font: 400 14.66px/1.38 Calibri; color: #000000; padding-left: 30px; text-decoration: none; margin-top: 0pt; margin-bottom: 0pt; vertical-align: baseline; list-style-type: disc; background-color: transparent;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;Password: N57training!1&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;"&gt;If an account does not exist for you, it is free to sign up. You can complete one challenge a day with the 30 Days of Code Challenge or you can complete the Python challenges from the python section.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;The tutorials&amp;nbsp;for the 30 Days of Code challenge&amp;nbsp;are taught in Java, but the programming concepts are used in every programming language. The challenges will require you to research the correct syntax to use with Python. HackerRank's own Python tutorials on it's site will be helpful. &lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="font-family: arial,helvetica,sans-serif;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;Why Python?&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;ul dir="ltr"&gt;&#xD;
+&lt;li&gt;&#xD;
+&lt;div style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;Open Source&lt;/span&gt;&lt;/div&gt;&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+&lt;div style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;Multi-Platform&lt;/span&gt;&lt;/div&gt;&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+&lt;div style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;Rich set of libraries can be used to do complicated tasks easily and efficiently.&lt;/span&gt;&lt;/div&gt;&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+&lt;div style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;Large number of open source tools use Python.&lt;/span&gt;&lt;/div&gt;&#xD;
+&lt;/li&gt;&#xD;
+&lt;li&gt;&#xD;
+&lt;div style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;HLL used for rapid prototyping&lt;/span&gt;&lt;/div&gt;&#xD;
+&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;&lt;span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;We chose HackerRank because through it's challenges, a user can learn a language very quickly with the tutorials being taught in an easy to follow manner. It is expected that you will struggle to complete some of the challenges, which is what they are designed to do.&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="font-family: arial,helvetica,sans-serif;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;span style="color: #000000; font-family: arial,helvetica,sans-serif; font-size: 10pt; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;As with learning anything new, you will struggle at first, but you will get better as you progress through the challenges and your confidence grows. Completing these challenges will help you immensely in completing the other Python scripting exercises. Especially, with being able to logically think about how to tackle the challenges presented to you in these training exercises and in the future during your career. &lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p dir="ltr" style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"&gt;&lt;em&gt;&lt;strong&gt;&lt;span style="color: #000000; font-family: arial, helvetica, sans-serif; font-size: 10pt; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"&gt;Email any questions you may have to adelphi-training-team@googlegroups.com&lt;/span&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;span style="font-family: arial,helvetica,sans-serif; font-size: 10pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;</tutorial>
+    <video>https://www.youtube.com/embed/zzjJ7Hty88M?list=PLcLMSci1ZoPs6jV0O3LBJwChjRon3lE1F"</video>
+    <question>
+      <text>Please upload a screenshot of Challenge 5 completed on HackerRank:</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+    <question>
+      <text>Please upload a screenshot of Challenge 10 completed on HackerRank:</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+    <question>
+      <text>Please upload a screenshot of Challenge 15 completed on HackerRank:</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+    <question>
+      <text>Please upload a screenshot of Challenge 20 completed on HackerRank:</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+  </exercise>
+</exercises>

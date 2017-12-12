@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Intro to Volatility</title>
+    <difficulty>1</difficulty>
+    <category>Forensics</category>
+    <name>intro_volatility</name>
+    <dependencies></dependencies>
+    <shortdescription>Intro to Volatility</shortdescription>
+    <description>Introduction to using Volatility.</description>
+    <tutorial>&lt;p&gt;In order to perform memory forensics with Volatility, you must first create a memory dump file. If you are creating a memory image of a Windows system you will need to use DumpIT, win[32/64]dd, winPmem, or Redline to create the dump. If you are creating a memory image of Linux I would recommend using LiME (Linux Memory Extractor). Another option is if you are working in a Virtual environment create a snapshot of the VM. Volatility supports mounting VM Snapshots as a memory image file. There is also a method to convert a hiberfil.sys or crash dump into a memory dump.&lt;/p&gt;&#xD;
+&lt;p&gt;Below&amp;nbsp;is a link to a youtube video demonstration on the use of vol.py&lt;/p&gt;&#xD;
+&lt;p&gt;I will provide a link to the documentation from SIFT Workstation on memory analysis.&lt;/p&gt;&#xD;
+&lt;p&gt;For the purposes of this exercise the memory file has been provided for you.&lt;/p&gt;&#xD;
+&lt;p&gt;A Windows standalone version of volatility has been provided in the defensive&amp;nbsp;share&amp;nbsp;and the following link is to the source code for vol.py.&lt;/p&gt;&#xD;
+&lt;p&gt;https://github.com/volatilityfoundation/volatility.git&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p&gt;Using the volPractice.vmem file provided, answer the following questions below.&lt;/p&gt;</tutorial>
+    <video>https://www.youtube.com/embed/XG7UcyEXahw</video>
+    <question>
+      <text>What is the profile version of the memory image?</text>
+      <type>shortanswer</type>
+      <answer>WinXPSP2x86</answer>
+    </question>
+    <question>
+      <text>How many closed connections are there in memory?</text>
+      <type>shortanswer</type>
+      <answer>3</answer>
+    </question>
+    <question>
+      <text>What are the destination addresses of these closed connections? Separate the addresses with 'and'</text>
+      <type>shortanswer</type>
+      <answer>65.199.32.55 and 192.168.1.181</answer>
+    </question>
+    <question>
+      <text>Who owns 65.199.32.55?</text>
+      <type>shortanswer</type>
+      <answer>Google</answer>
+    </question>
+    <question>
+      <text>Do any running processes immediately jump out at you?</text>
+      <type>shortanswer</type>
+      <answer>BonziBDY_4.exe</answer>
+    </question>
+    <question>
+      <text>Where is the suspicious process stored on disk?</text>
+      <type>shortanswer</type>
+      <answer>C:\Program Files\BonziBuddy432\BonziBDY_4.exe</answer>
+    </question>
+    <question>
+      <text>Windows environments contain something called shellbags. Shellbags contain loaded information on folders that have been visited by windows explorer.exe. For more information see the provided link: http://www.williballenthin.com/forensics/shellbags/&#xD;
+Does the suspicious process appear if you run the shellbags module in vol.py?</text>
+      <type>shortanswer</type>
+      <answer>Yes</answer>
+    </question>
+    <question>
+      <text>True or False: This indicates someone traveled to the folder containing the files in Windows Explorer.</text>
+      <type>shortanswer</type>
+      <answer>True</answer>
+    </question>
+    <question>
+      <text>For the purposes of this exercise the malware was located on the desktop, so of course the user navigated to the desktop, but if there had been a hidden folder or the folder were placed somewhere less likely to be visited what could shellbags be used to verify in a courtroom?&#xD;
+</text>
+      <type>shortanswer</type>
+      <answer>Malicious Intent</answer>
+    </question>
+    <question>
+      <text>Which vol.py module can be used to see what files are loaded into memory and their path on the system?</text>
+      <type>shortanswer</type>
+      <answer>filescan</answer>
+    </question>
+    <question>
+      <text>Lastly, what is the Administrator password for the machine?</text>
+      <type>shortanswer</type>
+      <answer>sully</answer>
+    </question>
+  </exercise>
+</exercises>

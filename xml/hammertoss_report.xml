@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Hammertoss FireEye Report</title>
+    <difficulty>1</difficulty>
+    <category>Analysis</category>
+    <name>hammertoss_report</name>
+    <dependencies></dependencies>
+    <shortdescription>Analyze this FireEye Report documenting an APT group.</shortdescription>
+    <description>Read through and analyze the Hammertoss report by FireEye, which documents a stealthy nation state APT group.</description>
+    <tutorial>&lt;p&gt;On your defensive workstation, open the Vendor Reports directory in the share drive and answer the questions below.&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</tutorial>
+    <question>
+      <text>What HAMMERTOSS variant communicates directly with a CnC server?</text>
+      <type>shortanswer</type>
+      <answer>Uploader</answer>
+    </question>
+    <question>
+      <text>How does the hammertoss malware create twitter handles?</text>
+      <type>multiple</type>
+      <answer>uses a basename and appends and prepends three CRC32 values based on the date.</answer>
+      <wrong>uses a basename and appends three CRC32 values based on the date.</wrong>
+      <wrong>uses a basename and prepends three CRC32 values based on the date.</wrong>
+      <wrong>uses a basename and appends and prepends three random values.</wrong>
+    </question>
+    <question>
+      <text>How does the malware try to blend in?</text>
+      <type>multiple</type>
+      <answer>Only communicates during active work hours in order to hide with the normal network traffic.</answer>
+      <wrong>Only communicates during non work hours, so that a network admin isn't around to catch it.</wrong>
+      <wrong>Only communicates on one particular day each week, so that it is infrequent enough to be noticed.</wrong>
+      <wrong>Only communicates when certain network conditions are met, so that it doesn't get caught during a network scan.</wrong>
+    </question>
+    <question>
+      <text>When an APT29 operator tweets, what does the hashtag part of the tweet do?</text>
+      <type>multiple</type>
+      <answer>Tells the malware to retrieve the instructions from that particular offset of the image file downloaded at the url and decrypt using that specific string.</answer>
+      <wrong>Tells the malware to retrieve the instructions from that hashtags page on twitter.</wrong>
+      <wrong>Tells the malware the coordinates of the DNS server to travel to and what XOR operation to perform in order to retrieve the next instructions.</wrong>
+      <wrong>Tags the specific malware in order to keep track of what instructions to execute.</wrong>
+    </question>
+    <question>
+      <text>Where does HAMMERTOSS visit to download an image?</text>
+      <type>multiple</type>
+      <answer>GitHub or a compromised website</answer>
+      <wrong>Google Drive</wrong>
+      <wrong>Dropbox</wrong>
+      <wrong>OneDrive</wrong>
+    </question>
+    <question>
+      <text>How does HAMMERTOSS visit the url specified in the tweet?</text>
+      <type>shortanswer</type>
+      <answer>InternetExplorer.Application COM Object</answer>
+    </question>
+    <question>
+      <text>Where does HAMMERTOSS exfil victims user data?</text>
+      <type>multiple</type>
+      <answer>To cloud storage</answer>
+      <wrong>To a remote server in Ukraine.</wrong>
+      <wrong>To a redirector, which then beacons back to a server in Russia.</wrong>
+    </question>
+    <question>
+      <text>What HAMMERTOSS variant utilizes twitter?</text>
+      <type>shortanswer</type>
+      <answer>tDiscoverer</answer>
+    </question>
+  </exercise>
+</exercises>

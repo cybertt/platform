@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>language testing</title>
+    <difficulty>0</difficulty>
+    <category>Informational</category>
+    <name>langtest</name>
+    <dependencies></dependencies>
+    <shortdescription>This exercise is for testing purposes only</shortdescription>
+    <description>This exercise is for testing purposes only</description>
+    <tutorial>&lt;p&gt;This exercise is for testing purposes only&lt;/p&gt;</tutorial>
+    <question>
+      <text>bash question</text>
+      <type>language</type>
+      <answer>bash output</answer>
+      <code>Bash</code>
+    </question>
+    <question>
+      <text>python question</text>
+      <type>language</type>
+      <answer>python output</answer>
+      <code>Python</code>
+    </question>
+    <question>
+      <text>C++ question</text>
+      <type>language</type>
+      <answer>C++ output</answer>
+      <code>C++</code>
+    </question>
+  </exercise>
+</exercises>

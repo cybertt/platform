@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>PowerShell 2: First Script</title>
+    <difficulty>0</difficulty>
+    <category>Programming</category>
+    <name>powershell2</name>
+    <dependencies>powershell1</dependencies>
+    <shortdescription>Write your first PowerShell script to iterate through a list of objects and interact with their properties</shortdescription>
+    <description>Write your first PowerShell script to iterate through a list of objects and interact with their properties</description>
+    <tutorial>&lt;ul&gt;&#xD;
+&lt;li&gt;Open powershell_ise.exe (you can use the run dialog)&amp;nbsp;(it will take a few seconds)&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;The top portion of the window is where you can write your PS scripts. The bottom portion is a powershell prompt that will output the results of your scripts when they run&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;As mentioned in the first powershell exercise, all powershell output is given to you in the form of objects&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;To begin, we will grab some system objects and iterate through them, changing or modifying properties&lt;/li&gt;&#xD;
+&lt;li&gt;Start by running get-process in the powershell prompt at the bottom portion of the window&lt;/li&gt;&#xD;
+&lt;li&gt;This will give you a list of processes currently running on the system&lt;/li&gt;&#xD;
+&lt;li&gt;Now we want to set the output of this command to a variable&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;$processes = get-process&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;We now have a variable that contains all running processes on the system as objects&lt;/li&gt;&#xD;
+&lt;li&gt;We can extract properties of this object by referencing them in this format: &lt;strong&gt;object.property&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;Start by getting a count of how many objects are stored in your variable&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;$processes.count&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Let's start programming in powershell&lt;/li&gt;&#xD;
+&lt;li&gt;We are going to iterate through the objects in our $processes variable using a "foreach loop"&lt;/li&gt;&#xD;
+&lt;li&gt;A foreach loop will select each object contained in a variable for the duration of the loop, allow you to interact with it, then move on to the next object in the variable the next time it goes through the loop and so on&lt;/li&gt;&#xD;
+&lt;li&gt;The loop will stop iterating when it reaches the end of the objects contained in your variable&lt;/li&gt;&#xD;
+&lt;li&gt;For now, let's manually count the number of objects in the $processes variable&lt;/li&gt;&#xD;
+&lt;li&gt;Start out by defning your variable in the top section of the ISE window (scripting area)&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;$processes = get-process&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Next, let's add a counter for our loop&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;$i = 1&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Now let's write a foreach loop that prints a number for each of the objects in our $processes variable&lt;/li&gt;&#xD;
+&lt;li&gt;Here is the syntax for a simple foreach loop:&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;$processes = get-process&lt;br /&gt;$i = 1&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;foreach ($object in $processes) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; write-host $i&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $i++&lt;br /&gt;}&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Type this in the top portion of the window and click the green play button (arrow) to run the script&lt;/li&gt;&#xD;
+&lt;li&gt;Is the last number printed out that same as the number you got when you typed $processes.count?&lt;/li&gt;&#xD;
+&lt;li&gt;Let's dissect this loop&lt;/li&gt;&#xD;
+&lt;li&gt;The condition is saying "for each object in my variable containing objects, perform this action"&lt;/li&gt;&#xD;
+&lt;li&gt;Each time it performs the action within the {}'s, the variable named $object will contain one of the objects from the variable named $processes&lt;/li&gt;&#xD;
+&lt;li&gt;Because this will run the code once for each object contained in the variable, we can print out a number within the running code (write-host $i), then increment the number for the next iteration of the loop ($i++)&lt;/li&gt;&#xD;
+&lt;li&gt;Instead of counting the processes, let's get properties from them&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;$processes = get-process&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;foreach ($object in $processes) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; $object.name&lt;br /&gt;}&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;What did this output?&lt;/li&gt;&#xD;
+&lt;li&gt;Let's try to add a condition and kill a certain process called taskhost&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;foreach ($object in $processes) {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; if ($object.name -match "taskhost") {&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; stop-process $object -force&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;br /&gt;}&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;This loop should iterate through each of the objects and check to see if the name property of each object matches the string "taskhost". If it does it will run the cmdlet Stop-Process on the object.&lt;/li&gt;&#xD;
+&lt;li&gt;Notice the difference between using stop-process and something like taskkill or pkill in Linux. With Stop-Process, we are passing in an object. When using tools such as taskkill and pkill, we are passing in some text such as the name of process&lt;/li&gt;&#xD;
+&lt;li&gt;What is the difference between an object and a string?&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</tutorial>
+    <question>
+      <text>Each time you iterate through a loop, the variable you are using contains which of the following?</text>
+      <type>multiple</type>
+      <answer>an object</answer>
+      <wrong>an item</wrong>
+      <wrong>a string of text</wrong>
+      <wrong>a property</wrong>
+    </question>
+    <question>
+      <text>What is the difference between an object and a string?</text>
+      <type>multiple</type>
+      <answer>An object is dynamic and contains interactive properties and a string is just a block of text</answer>
+      <wrong>An object is static and contains noninteractive properties and a string is just a block of text</wrong>
+      <wrong>An object is a collection of values and a string is used to store words</wrong>
+      <wrong>An object is a way of interacting with the kernel </wrong>
+    </question>
+  </exercise>
+</exercises>

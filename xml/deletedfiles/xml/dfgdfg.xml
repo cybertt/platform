@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>dfg</title>
+    <difficulty>3</difficulty>
+    <name>dfgdfg</name>
+    <shortdescription>dfgdf</shortdescription>
+    <description>gdfgdf</description>
+    <tutorial>&lt;p&gt;gfhfg&lt;/p&gt;</tutorial>
+    <question>
+      <text>fghfg</text>
+      <type>shortanswer</type>
+      <answer>fghfgh</answer>
+    </question>
+  </exercise>
+</exercises>

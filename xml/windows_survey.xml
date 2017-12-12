@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Windows Survey</title>
+	<dependencies>Malware_Analysis_P1,Malware_Analysis_P2,Malware_Analysis_P3,Malware_Analysis_P4</dependencies>
+    <difficulty>2</difficulty>
+	<category>CNE</category>
+    <name>windows_survey</name>
+    <shortdescription>Windows Survey</shortdescription>
+    <description>Prior to interacting with your target, it is a good idea to create a list of commands you plan to run. This list of commands acts as a survey to help develop target situational awareness.&#xD;
+In order to help you keep track of any unwanted attention you may have brought to yourself, it is important for you to record all commands with timestamps to easily identify any logging later on. This includes any pre-exploitation or vulnerability scans.&#xD;
+As you run through your survey commands you should always be asking yourself, "Am I caught?" and "Is it safe to operate?"</description>
+    <tutorial>&lt;p&gt;&lt;span style="color: black; font-family: 'Arial','sans-serif'; mso-fareast-font-family: 'Times New Roman';"&gt;&lt;span style="font-size: medium;"&gt;It is important to always have target situational awareness. We want to always ask ourselves, am I caught? Is it safe to operate? &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p style="margin: 0in 0in 10pt; line-height: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;"&gt;&lt;span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 36pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;Process enumeration&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;span style="font-family: tahoma,arial,helvetica,sans-serif;"&gt;&lt;span style="font-size: 10pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;&lt;span style="font-size: 14pt;"&gt;t&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 14pt; mso-fareast-font-family: 'Times New Roman';"&gt;asklist &lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;span style="font-family: 'Arial','sans-serif'; font-size: 12pt; mso-fareast-font-family: 'Times New Roman';"&gt;run a basic tasklist&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level1 lfo2; tab-stops: list .5in;"&gt;&lt;span style="font-family: tahoma,arial,helvetica,sans-serif; font-size: 14pt; mso-fareast-font-family: 'Times New Roman';"&gt;tasklist /svc &lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level1 lfo2; tab-stops: list .5in;"&gt;&lt;span style="font-family: 'Arial','sans-serif'; font-size: 12pt; mso-fareast-font-family: 'Times New Roman';"&gt;run tasklist while listing services&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level1 lfo2; tab-stops: list .5in;"&gt;&lt;span style="font-family: tahoma,arial,helvetica,sans-serif; font-size: 14pt; mso-fareast-font-family: 'Times New Roman';"&gt;wmic process get executablepath,processid,parentprocessid|findstr /i system32 &lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level1 lfo2; tab-stops: list .5in;"&gt;&lt;span style="font-family: 'Arial','sans-serif'; font-size: 12pt; mso-fareast-font-family: 'Times New Roman';"&gt;lists all system32 executables&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level1 lfo2; tab-stops: list .5in;"&gt;&lt;span style="font-size: 14pt; mso-fareast-font-family: Arial;"&gt;wmic process get executablepath,processid,parentprocessid|findstr /v /i system32|findstr exe&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level1 lfo2; tab-stops: list .5in;"&gt;&lt;span style="font-family: 'Arial','sans-serif'; font-size: 12pt; mso-fareast-font-family: Arial;"&gt;lists all other executables&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level1 lfo2; tab-stops: list .5in;"&gt;&lt;span style="font-family: 'Verdana','sans-serif'; font-size: 14pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;wmic process get executablepath,processid,parentprocessid&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level1 lfo2; tab-stops: list .5in;"&gt;&lt;span style="font-family: 'Verdana','sans-serif'; font-size: 12pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;lists all processes&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l1 level1 lfo2; tab-stops: list .5in;"&gt;&lt;span style="font-size: 14pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;echo. &amp;amp;&amp;amp; echo system32 stuff &amp;amp;&amp;amp; wmic process get executablepath,processid,parentprocessid|findstr /i system32 &amp;amp;&amp;amp; echo. &amp;amp;&amp;amp; echo other stuff &amp;amp;&amp;amp; wmic process get executablepath,processid,parentprocessid|findstr /v /i system32 |findstr exe&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;&lt;span style="font-size: 14pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;span style="color: black; font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial;"&gt;&lt;span style="font-size: medium;"&gt;Does anything stand out as abnormal?&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p style="margin: 0in 0in 10pt; line-height: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;"&gt;&lt;span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p style="margin: 0in 0in 10pt; line-height: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;"&gt;&lt;span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 36pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;Socket enumeration&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;ul type="disc"&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l3 level1 lfo7; tab-stops: list .5in;"&gt;&lt;span style="font-family: tahoma,arial,helvetica,sans-serif; font-size: 14pt; mso-fareast-font-family: 'Times New Roman';"&gt;netstat -ano|findstr EST&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l3 level1 lfo7; tab-stops: list .5in;"&gt;&lt;span style="font-family: 'Arial','sans-serif'; font-size: 12pt; mso-fareast-font-family: 'Times New Roman';"&gt;Lists all establish TCP connections&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l3 level1 lfo7; tab-stops: list .5in;"&gt;&lt;span style="font-family: tahoma,arial,helvetica,sans-serif; font-size: 14pt; mso-fareast-font-family: 'Times New Roman';"&gt;netstat -ano|findstr LIST&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li style="margin: 0in 0in 10pt; color: black; line-height: normal; font-style: normal; font-weight: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l3 level1 lfo7; tab-stops: list .5in;"&gt;&lt;span style="font-family: 'Arial','sans-serif'; font-size: 12pt; mso-fareast-font-family: 'Times New Roman';"&gt;Lists all listening sockets&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p style="margin: 0in 0in 10pt; line-height: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;"&gt;&amp;nbsp;&lt;span style="color: black; font-family: 'Arial','sans-serif'; mso-fareast-font-family: Arial;"&gt;&lt;span style="font-size: medium;"&gt;Does anything stand out as abnormal?&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p style="margin: 0in 0in 10pt; line-height: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;"&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p style="margin: 0in 0in 10pt; line-height: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;"&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p style="margin: 0in 0in 10pt; line-height: normal; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto;"&gt;&lt;span style="color: black; font-family: 'Arial','sans-serif'; font-size: 36pt; mso-fareast-font-family: 'Times New Roman';"&gt;Logging&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;If nothing stands out as abnormal from the first set of commands you should continue your survey by verifying you didn't create any logs.&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;span style="color: black; font-family: 'Verdana','sans-serif'; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;First get the system date and time with&amp;hellip;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;span style="font-family: 'Verdana','sans-serif'; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;&lt;span style="font-family: tahoma,arial,helvetica,sans-serif; font-size: 14pt;"&gt;date /t&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;span style="font-family: 'Verdana','sans-serif'; font-size: 12pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;first get the system date and time with&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;&lt;span style="font-family: 'Verdana','sans-serif'; font-size: 8.5pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;&lt;span style="font-family: tahoma,arial,helvetica,sans-serif; font-size: 14pt;"&gt;time /t&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;span style="font-family: 'Verdana','sans-serif'; font-size: 12pt; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman';"&gt;then get the system time with&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;&lt;span style="color: black; font-family: 'Arial','sans-serif'; font-size: 12pt; mso-fareast-font-family: 'Times New Roman';"&gt;By using the local time of the box, you can recursively search for any files modified after you started interacting with the target. For example:&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;span style="font-size: 14pt;"&gt;&lt;span style="font-family: tahoma,arial,helvetica,sans-serif;"&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;dir /s /a:-d /o:d c:\|find /i "06/29/2016&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp; &lt;/span&gt;&lt;/span&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;10:5"|more&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;span style="font-size: 12pt;"&gt;&lt;span style="line-height: 115%; font-family: arial,helvetica,sans-serif; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt; lists files modified after 06/29/2016&amp;nbsp; 1050 AM or PM // It's a good idea to pipe to "more" if expect a lot of output&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;&lt;span style="color: black; font-family: tahoma,arial,helvetica,sans-serif; font-size: 14pt; mso-fareast-font-family: 'Times New Roman';"&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;dir /s /a:-d /o:d c:\|find /i "06/29/2016&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp; &lt;/span&gt;10:4"|more&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;span style="color: black; font-family: tahoma,arial,helvetica,sans-serif; font-size: 12pt; mso-fareast-font-family: 'Times New Roman';"&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;you can then modify the time to back ten minutes further if needed&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;&lt;span style="color: black; font-family: tahoma,arial,helvetica,sans-serif; font-size: 14pt; mso-fareast-font-family: 'Times New Roman';"&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;forfiles /d +6/30/2016 /c "cmd /c echo @ftime @path" /s|findstr 11:|more&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;span style="color: black; font-family: tahoma,arial,helvetica,sans-serif; font-size: 12pt; mso-fareast-font-family: 'Times New Roman';"&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;lists files modified within a day of the date shown, must be ran on the drive of interest&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;&lt;span style="color: black; font-family: tahoma,arial,helvetica,sans-serif; font-size: 14pt; mso-fareast-font-family: 'Times New Roman';"&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;&lt;span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; mso-ascii-theme-font: minor-latin; mso-fareast-theme-font: minor-latin; mso-hansi-theme-font: minor-latin; mso-bidi-theme-font: minor-bidi;"&gt;Alternatively with powershell&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;span style="font-size: 14pt;"&gt;&lt;span style="font-family: tahoma,arial,helvetica,sans-serif;"&gt;Get-ChildItem -erroraction ignore -filter "*" -recurse -path C:\ | where {($_.CreationTime -gt ((get-date).AddMinutes(-10)))}&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;span style="font-size: 12pt;"&gt;Lists all files modified within 10 minutes while ignoring and errors&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;div&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;p&gt;&lt;span style="font-family: Times New Roman; font-size: medium;"&gt; &lt;br /&gt;&lt;/span&gt;&lt;/p&gt;</tutorial>
+    <question>
+      <text>Which of the following is *not* in the output of 'w'?</text>
+      <type>multiple</type>
+      <answer>CPU Utilization</answer>
+      <wrong>Logged-in Users</wrong>
+    </question>
+  </exercise>
+</exercises>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>TCP Echo Client &amp; Server</title>
+    <difficulty>2</difficulty>
+    <category>Programming</category>
+    <name>echo_client_server</name>
+    <dependencies></dependencies>
+    <shortdescription>Create a TCP echo client and server using Python.</shortdescription>
+    <description>Create a TCP echo client and server using Python.</description>
+    <tutorial>&lt;p&gt;On your defensive workstation, create a tcp echo client and server using Python. Only the client should display output to the console.&lt;/p&gt;&#xD;
+&lt;p&gt;A TCP echo client is a program that opens a socket, binds it's address to localhost, and sends a message to a server. It then receives that same message back from the server.&lt;/p&gt;&#xD;
+&lt;p&gt;A TCP echo server is a program that creates a socket, binds to an address, and echos back the message received from the client.&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;For Help: email your code to&amp;nbsp;the Adelphi Training Team at adelphi-training-team@googlegroups.com for code review.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;Python is available for install in the share drive, if it is not already installed on your workstation.&lt;/p&gt;</tutorial>
+    <video>https://www.youtube.com/embed/WrtebUkUssc</video>
+    <question>
+      <text>Upload your code below</text>
+      <type>upload</type>
+      <answer>Yes</answer>
+    </question>
+    <question>
+      <text>What function creates a socket?</text>
+      <type>shortanswer</type>
+      <answer>socket</answer>
+    </question>
+    <question>
+      <text>What function binds an address to a socket?</text>
+      <type>shortanswer</type>
+      <answer>bind</answer>
+    </question>
+    <question>
+      <text>what is the socket parameter for setting a socket to use IPv4?</text>
+      <type>shortanswer</type>
+      <answer>AF_INET</answer>
+    </question>
+    <question>
+      <text>What function receives data?</text>
+      <type>shortanswer</type>
+      <answer>recv</answer>
+    </question>
+    <question>
+      <text>Submit your code below</text>
+      <type>language</type>
+      <answer></answer>
+      <code>Python</code>
+    </question>
+  </exercise>
+</exercises>

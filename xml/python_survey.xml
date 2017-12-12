@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>System Survey w/ Python</title>
+    <difficulty>2</difficulty>
+    <category>Programming</category>
+    <name>python_survey</name>
+    <dependencies></dependencies>
+    <shortdescription>Write a python script to survey a box.</shortdescription>
+    <description>Write a python script to survey a box.</description>
+    <tutorial>&lt;p&gt;Write python scripts to perform a light survey of the box (Windows and Unix)&amp;nbsp;for you and output it to a text file. Retrieve the following information:&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Uptime&lt;/li&gt;&#xD;
+&lt;li&gt;OS Version&lt;/li&gt;&#xD;
+&lt;li&gt;Users on box.&lt;/li&gt;&#xD;
+&lt;li&gt;PS List - with PPID, CPU Time, Owner of each process, and Directory path being run out of.&lt;/li&gt;&#xD;
+&lt;li&gt;Netstat - listing all listening and established connections mapped to the PIDs.&lt;/li&gt;&#xD;
+&lt;li&gt;Scheduler/chron jobs&amp;nbsp;- list all scheduled events to take place and the frequency of their occurrence.&lt;/li&gt;&#xD;
+&lt;li&gt;Services - Get a list of the running services.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;Keep in mind that running these commands will log somewhere. Try to find out where.&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;For Help: Email your code to adelphi-training-team@googlegroups.com for code review.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</tutorial>
+    <question>
+      <text>Why is determining the uptime of the box important?</text>
+      <type>multiple</type>
+      <answer>Helps establish the reliability of the box.</answer>
+      <wrong>Helps establish how often the box is updated.</wrong>
+      <wrong>Helps establish how long a user has been using the box.</wrong>
+      <wrong>Helps establish how long the box has been up.</wrong>
+    </question>
+    <question>
+      <text>What command should be run first on a unix box in order to disable command history logging?</text>
+      <type>multiple</type>
+      <answer>unset HISTFILE</answer>
+      <wrong>nohist</wrong>
+      <wrong>history -c</wrong>
+      <wrong>rm -rf /etc/hist</wrong>
+    </question>
+    <question>
+      <text>Take a screen shot of the output of your code and upload the screenshot.</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+    <question>
+      <text>Submit your code below</text>
+      <type>language</type>
+      <answer></answer>
+      <code>Python</code>
+    </question>
+  </exercise>
+</exercises>

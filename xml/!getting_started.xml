@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Getting Started </title>
+    <difficulty>0</difficulty>
+    <category>Informational</category>
+    <name>!getting_started</name>
+    <dependencies></dependencies>
+    <shortdescription>For now, this page contains instructions for basic tasks on the training networks.</shortdescription>
+    <description>This is a placeholder page containing basic information on how to use the training environment. This will eventually be replaced by a proper FAQ page.</description>
+    <tutorial>&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;To login to your workstations&lt;/strong&gt;:&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;NOTE: &lt;/strong&gt;This documentation is obsolete. Workstations should now log in automatically. This is being retained for abnormal cases only.&lt;/li&gt;&#xD;
+&lt;li&gt;Once you have checked out and launched a workstation suite, you will have a console to an offense and defense workstation as well as the exercise list open in three tabs in your browser. Please note the suite number you checked out as it will be important.&lt;/li&gt;&#xD;
+&lt;li&gt;Open the offense or defense workstation tab in your browser. If the screen is black, click in the black area (equivalent to moving the mouse when your computer is asleep). You will now see a Windows login screen. At the top right, there is a button labeled "Send Ctrl-Alt-Delete". Click this to get a login prompt on the workstation.&lt;/li&gt;&#xD;
+&lt;li&gt;The credentials for the offense workstation are: attacker# P@ssw0rd Where "#" is your suite number. For example, if you checked out suite 3, your credentials will be: attacker3 P@ssw0rd The credentials for the defense workstation are: defender# P@ssw0rd Where "#" is your suite number. For example, if you checked out suite 5, your credentials will be: defender5 P@ssw0rd&lt;/li&gt;&#xD;
+&lt;li&gt;Press enter to login.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;To access exercise resources&lt;/strong&gt;: Currently, exercises will be primarily performed from the offense and defense&amp;nbsp;workstations. To access exercise resources, simply click the icon on your desktop labeled ShareFiles. The folder labeled y_resources contains many of the resources necessary to complete the exercises. On the defensive workstation, all analysis tools and labs are in the share drive.&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;To set up your email client&lt;/strong&gt;:&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Open Windows Live Mail on your desktop. The accounts should already be set up.&lt;/li&gt;&#xD;
+&lt;li&gt;Your defense and offense accounts are defender#@gmail.local and attacker#@gmail.local &lt;strong&gt;(where # is your suite number)&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;To access Kali Linux&lt;/strong&gt;:&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Open PuTTY fom your desktop &lt;strong&gt;ON YOUR OFFENSE WORKSTATION&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;In host box, type "kali" (without quotes)&lt;/li&gt;&#xD;
+&lt;li&gt;Click connect at the bottom, then click yes&lt;/li&gt;&#xD;
+&lt;li&gt;Log in with the username "root" and the password "P@ssw0rd" (without the quotes)&lt;/li&gt;&#xD;
+&lt;li&gt;To open more windows, right click on the top bar of the window and click duplicate session.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;To access your HackerRank account:&amp;nbsp;&lt;/strong&gt;HackerRank will be used to quickly get you familiar with Python.&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;go to hackerrank.com&lt;/li&gt;&#xD;
+&lt;li&gt;Log with the username "firstinitiallastname_n57" | password: N57training!1&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;If an account does not exist for you, you can create one for free. This site is for your programming benefit, if you are new to programming.&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/ul&gt;</tutorial>
+    <question>
+      <text>Did you read this?</text>
+      <type>multiple</type>
+      <answer>Yes</answer>
+      <wrong>no</wrong>
+    </question>
+  </exercise>
+</exercises>

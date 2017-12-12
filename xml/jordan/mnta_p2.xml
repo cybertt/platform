@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Malicious Traffic Analysis - Part 2</title>
+	<dependencies>parse_google_news, base64_decoder, word_frequency, echo_client_server, collateral_duty_script</dependencies>
+    <difficulty>2</difficulty>
+	<category>analysis</category>
+    <name>mnta_p2</name>
+    <shortdescription>Analyze network traffic captured of an attacker probing a network.</shortdescription>
+    <description>Analyze the network traffic captured to determine what type of network probe is being attempted by the attacker.</description>
+    <tutorial>&lt;p&gt;As a Network Administrator for your company you start your normal day by logging in to your machine in the morning at 7:30am. As soon as you login you see a message containing the following information:&lt;/p&gt;&#xD;
+&lt;p&gt;"Potential Network Probe Detected by IP 97.79.245.16"&lt;/p&gt;&#xD;
+&lt;p&gt;Your company owns one public Class C:&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;212.15.61.0/24&lt;/li&gt;&#xD;
+&lt;li&gt;All traffic addressed to that Class C range of IP's are sent to the 212.15.61.194 router from your ISP.&lt;/li&gt;&#xD;
+&lt;li&gt;Only 212.15.61.194 in the Class C is up right now.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;Analyze the network probe being attempted and answer the questions below.&lt;/p&gt;</tutorial>
+    <question>
+      <text>What is the phone number of the ISP responsible for the IP block of the attacker?</text>
+      <type>shortanswer</type>
+      <answer>1-703-345-3416</answer>
+    </question>
+    <question>
+      <text>What is the address of the ISP provider?</text>
+      <type>shortanswer</type>
+      <answer>13241 Woodland Park Rd, Herndon, VA 20171</answer>
+    </question>
+    <question>
+      <text>What were the targeted ports?</text>
+      <type>multiple</type>
+      <answer>80, 21, 443, 22</answer>
+      <wrong>80, 21, 443, 23</wrong>
+      <wrong>80, 23, 443, 25</wrong>
+      <wrong>8080, 23, 443, 22</wrong>
+    </question>
+    <question>
+      <text>Where was the attacker located?</text>
+      <type>shortanswer</type>
+      <answer>Austin, Texas</answer>
+    </question>
+    <question>
+      <text>What host was the attacker able to determine was up?</text>
+      <type>shortanswer</type>
+      <answer>212.15.61.194</answer>
+    </question>
+    <question>
+      <text>What ports was the attacker able to determine were open for the host that was up? Answer format: "port # and port #"</text>
+      <type>shortanswer</type>
+      <answer>port 22 and port 80</answer>
+    </question>
+    <question>
+      <text>A recon scan was performed. What was the nmap scan that was conducted? &#xD;
+Hint: Determine the type of scan first (Syn scan, UDP scan, TCP connect, etc.), remember the ports you discovered were scanned and then determine the options that would produce the same pcap results. ex: nmap -sU -p 123,161,162 -Pn 192.168.1.1</text>
+      <type>shortanswer</type>
+      <answer>nmap -sT -p 80,21,22,443 212.15.61.194</answer>
+    </question>
+    <question>
+      <text>How many hosts were scanned? Answer in CIDR notation. ex: 192.168.1.0/24</text>
+      <type>shortanswer</type>
+      <answer>212.15.61.0/24</answer>
+    </question>
+  </exercise>
+</exercises>

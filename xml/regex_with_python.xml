@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Regex Parsing With Python</title>
+    <difficulty>2</difficulty>
+    <category>Programming</category>
+    <name>regex_with_python</name>
+    <dependencies></dependencies>
+    <shortdescription>Use Python to Parse large amounts of data.</shortdescription>
+    <description>Use Python to parse a large file for relevant information.</description>
+    <tutorial>&lt;p&gt;&lt;strong&gt;Scenario:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;You work in the statistics department for a third party polling labor company. You are analyzing a study on US High School graduates and higher degrees but unfortunately the company has simply given you an entire dump of their database. You do not need all this information.&lt;/p&gt;&#xD;
+&lt;p&gt;The file has been named simply, testdata.txt, and is in the defensive share on your defensive workstation. Rename the file to current date, underscore, and Labor_company_poll_data.txt.&lt;/p&gt;&#xD;
+&lt;p&gt;EX: 20161201_Labor_company_poll_data.txt&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Task:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;For this exercise, write a script that accomplishes the following:&lt;/p&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;Rename file using format above.&lt;/li&gt;&#xD;
+&lt;li&gt;Remove un-needed data.&lt;/li&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;remove data (anyone not a high school graduate or above, anyone not in US)&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&lt;li&gt;Change data.&lt;/li&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;change data to account for unknowns (all nationality&amp;rsquo;s not labeled are US I.e.(? = US))&lt;/li&gt;&#xD;
+&lt;li&gt;Add data (names: Jake for males, Sally for females)&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&lt;li&gt;Organize / Sort data.&lt;/li&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;organize (Age, degree, Unfinished degree)&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&lt;li&gt;Print out Counts&lt;/li&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;count (Age ranges(&amp;lt;17, 18-25,25-35,35-65,65+), degrees)&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&lt;li&gt;Create query.&lt;/li&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;make a query system using comma separated keys (not case sensitive)&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&lt;li&gt;Present all data in organized readable format.&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;Hints:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;Conditionals&lt;/p&gt;&#xD;
+&lt;p&gt;Loops (for, while)&lt;/p&gt;&#xD;
+&lt;p&gt;Regular Expressions&lt;/p&gt;&#xD;
+&lt;p&gt;Boolean Logic&lt;/p&gt;&#xD;
+&lt;p&gt;CSV Module&lt;/p&gt;&#xD;
+&lt;p&gt;List comprehension&lt;/p&gt;&#xD;
+&lt;p&gt;Dictionaries&lt;/p&gt;&#xD;
+&lt;p&gt;python Module: sorted&lt;/p&gt;&#xD;
+&lt;p&gt;string methods&lt;/p&gt;&#xD;
+&lt;p&gt;OS module&lt;/p&gt;&#xD;
+&lt;p&gt;datetime module&lt;/p&gt;&#xD;
+&lt;p&gt;upper() and lower() module&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Helpful Resource Links:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;https://regexone.com/&lt;/p&gt;&#xD;
+&lt;p&gt;https://regexone.com/references/python&lt;/p&gt;&#xD;
+&lt;p&gt;https://www.tutorialspoint.com/python/python_reg_expressions.htm&lt;/p&gt;&#xD;
+&lt;p&gt;https://docs.python.org/2/howto/regex.html&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;2. Write a regex that would match to the following string.&lt;/p&gt;&#xD;
+&lt;p&gt;String: ABC123, come H4X0r with me! But, there&amp;rsquo;s no place like 127.0.0.1. Sooooo 1337.&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3. Upload image of working code.&lt;/p&gt;</tutorial>
+    <video>https://www.youtube.com/embed/ZdDOauFIDkw</video>
+    <question>
+      <text>See following hash, what will the following regex match too?&#xD;
+Hash: d131dd02c5e6eec4 693d9a0698aff95c 2fcab58712467eab 4004583eb8fb7f89&#xD;
+Regex: ([0-9]a![1-9])</text>
+      <type>shortanswer</type>
+      <answer>9a0</answer>
+    </question>
+    <question>
+      <text>Take a screenshot of your code working and upload below</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+  </exercise>
+</exercises>

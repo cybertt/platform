@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Powershell 1: Learn PowerShell</title>
+    <difficulty>0</difficulty>
+    <category>Programming</category>
+    <name>powershell1</name>
+    <dependencies></dependencies>
+    <shortdescription>Learn PS cmdlets and remoting</shortdescription>
+    <description>This exercise is designed to teach you how to use PowerShell to remote into a machine and run basic commands</description>
+    <tutorial>&lt;ol&gt;&#xD;
+&lt;li&gt;The first thing we need to do is set up our PowerShell (PS) client to connect to foreign (untrusted) hosts. On your Offense workstation, open up an elevated PowerShell window.&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Click the start menu, search for PowerShell&lt;/li&gt;&#xD;
+&lt;li&gt;When you see the PowerShell link display in your search results, &lt;strong&gt;right click on it and select "Run as Administrator"&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;From the elevated PowerShell window, run the following commands:&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;cd wsman:localhost\Client&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;Set-Item AllowUnencrypted -Value $true -force&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;Set-Item TrustedHosts -Value * -force&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;HINT:&lt;/strong&gt; TRY USING THE TAB KEY TO AVOID TYPING LONG WORDS (PowerShell has excellent autocomplete)&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;HINT:&lt;/strong&gt; POWERSHELL CMDLETS ARE NOT CASE SENSITIVE!&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;As you can see, you are setting the "TrustedHosts" property of WSMAN to allow everything (*). Now we are ready to begin PS Remoting&lt;/li&gt;&#xD;
+&lt;li&gt;Using old school cmd.exe commands from within powershell, determine the NetBIOS hostname associated with the IP address 192.20.128.36&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;HINT:&lt;/strong&gt; SEARCH BING OR GOOGLE FOR "find netbios hostname from IP address" for a good command to use&lt;/li&gt;&#xD;
+&lt;li&gt;What command did you use?&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;Document the hostname you found for 192.20.128.36, you will need it later&lt;/li&gt;&#xD;
+&lt;li&gt;We will now establish a remote PS session with our target. The syntax is as follows &lt;strong&gt;(REPLACE&lt;/strong&gt; "&lt;em&gt;hostname&lt;/em&gt;"&lt;strong&gt; with the hostname you found)&lt;/strong&gt;:&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;New-PsSession -ComputerName 192.20.128.36-Credential &lt;/strong&gt;&lt;em&gt;hostname&lt;/em&gt;&lt;strong&gt;\Administrator&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;The password for this account is: P@ssw0rd&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;Run &lt;strong&gt;Get-PsSession&lt;/strong&gt; to get a list of open PS Sessions that you can connect to. When you have found the PS Session that you just opened, find its ID number (at the left) and run this cmdlet: &lt;strong&gt;Enter-PsSession &lt;/strong&gt;&lt;em&gt;sessionNumber&lt;/em&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;HINT:&lt;/strong&gt; All PowerShell cmdlets are structured as &lt;strong&gt;Verb-SingularNoun&lt;/strong&gt;. You would never run &lt;strong&gt;Get-PsSession&lt;span style="text-decoration: underline;"&gt;s&lt;/span&gt;&lt;/strong&gt; as the noun is plural.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;You will be able to see that you are now running commands on a remote machine as your prompt will have changed in your console window. Try running &lt;strong&gt;hostname&lt;/strong&gt; to determine which computer you are on. Does the hostname match the name you documented earlier?&lt;/li&gt;&#xD;
+&lt;li&gt;Let's spend some time enumerating the system. We need to figure out things like the version of Windows we are running, services, process list, socket statistics, etc. Start by running &lt;strong&gt;Get-Service&lt;/strong&gt;. What service are you connecting to on this host?&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;HINT:&lt;/strong&gt; The service involves managing a host remotely. Try researching on the internet if you cannot figure it out.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;What is the process ID of your current session? Try typing &lt;strong&gt;$PID&lt;/strong&gt; and hitting enter&lt;/li&gt;&#xD;
+&lt;li&gt;Let's run an old cmd.exe command. Type &lt;strong&gt;netstat -ano&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;What do each of these switch options do?&lt;/li&gt;&#xD;
+&lt;li&gt;What port are you connected to?&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;HINT:&lt;/strong&gt; Try researching what port remote PS uses and find your connection in netstat&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;What version of Windows is this machine? We can figure this out several ways. Let's start by seeing what's in the environment:&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;[environment]::OSVersion.Version&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;What is the major version? What does this mean?&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;Let's try using WMI objects to get the OS Version &lt;strong&gt;(REPLACE&lt;/strong&gt; "&lt;em&gt;hostname&lt;/em&gt;"&lt;strong&gt; with the hostname you found):&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;$myComputer = Get-WmiObject -class Win32_OperatingSystem -computername &lt;/strong&gt;&lt;em&gt;hostname&lt;/em&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;$myComputer | Format-List&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;What is the difference between the output you got from the environment and the output you got from WMI?&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;What is WMI? (Try researching)&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;What does Format-List actually do? We can find out using "help". Run the following:&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;help Format-List&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;Format-List allows you to extract all properties from an object and format your output.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;There is an easier way to use many common cmdlets. Run &lt;strong&gt;Get-Alias&lt;/strong&gt; to get a list of "aliases" of common cmdlets. Aliases are basically shortened names for cmdlets. What is an alias for &lt;strong&gt;Format-List&lt;/strong&gt;?&lt;/li&gt;&#xD;
+&lt;li&gt;Try running the previous command using the alias you found. NOTE: replace "&lt;em&gt;alias&lt;/em&gt;" with the alias you found for Format-List:&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;$myComputer | &lt;/strong&gt;&lt;em&gt;alias&lt;/em&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;Is &lt;strong&gt;help &lt;/strong&gt;an alias or a cmdlet?&lt;/li&gt;&#xD;
+&lt;li&gt;How can you get a process list? Let's try &lt;strong&gt;help&lt;/strong&gt; with wildcards and keywords&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;help *process*&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;Which cmdlet will give you a process list? Use &lt;strong&gt;help &lt;/strong&gt; to get the syntax for that cmdlet. What syntax did you use?&lt;/li&gt;&#xD;
+&lt;li&gt;Use &lt;strong&gt;Get-Process &lt;/strong&gt; to show me all of the &lt;strong&gt;svchosts&lt;/strong&gt; on this machine.&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;HINT: &lt;/strong&gt;take a look at the &lt;strong&gt;-name&lt;/strong&gt; switch option&lt;/li&gt;&#xD;
+&lt;li&gt;What syntax did you use? This syntax will be used in the next step&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;Everything in PowerShell is an &lt;strong&gt;object&lt;/strong&gt;. Objects have characteristics known as &lt;strong&gt;methods&lt;/strong&gt;. Methods are pretty self explanatory most of the time. For example, the &lt;strong&gt;count&lt;/strong&gt; method simply tells you "how many of them" you have. Let's use the count method to determine how many &lt;strong&gt;svchosts&lt;/strong&gt; we have running on this system. &lt;strong&gt;NOTE: &lt;/strong&gt;Replace "&lt;em&gt;syntax&lt;/em&gt;"&amp;nbsp; with the syntax you used in step 21:&lt;/li&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;&lt;strong&gt;(&lt;/strong&gt;&lt;em&gt;syntax&lt;/em&gt;&lt;strong&gt;).count&lt;/strong&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;How many svchosts are running on this system?&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;li&gt;Close down your PS session using &lt;strong&gt;exit&lt;/strong&gt; or&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <question>
+      <text>What command did you use in step 4?</text>
+      <type>multiple</type>
+      <answer>nbtstat</answer>
+      <wrong>net view</wrong>
+      <wrong>net use</wrong>
+      <wrong>nslookup</wrong>
+    </question>
+    <question>
+      <text>What is the NetBIOS hostname of the target you found in step 4?</text>
+      <type>multiple</type>
+      <answer>WIN-TNRQIG2I00H</answer>
+      <wrong>WIN-TNRQIG2I45H</wrong>
+      <wrong>POWERSHELL-TARGET</wrong>
+      <wrong>OFFENSE-WORKSTATION13</wrong>
+    </question>
+    <question>
+      <text>What service are you connecting to on the host in step 9?</text>
+      <type>multiple</type>
+      <answer>Windows Remote Management (WinRM)</answer>
+      <wrong>VMware Tools (VMTools)</wrong>
+      <wrong>Network Connections (Netman)</wrong>
+      <wrong>Computer Browser (Browser)</wrong>
+    </question>
+    <question>
+      <text>What does the Process ID (PID) of your PowerShell session look like?</text>
+      <type>multiple</type>
+      <answer>A series of numbers such as 104 or 2093</answer>
+      <wrong>A letter followed by a series of numbers such as L4039 or P102</wrong>
+      <wrong>A serial number such as WX6073PST or WX109I30Q</wrong>
+      <wrong>A hexadecimal code such as 0x5B or 0xA3</wrong>
+    </question>
+    <question>
+      <text>What do the switch options 'ano' correspond to on your netstat command in step 11?</text>
+      <type>multiple</type>
+      <answer>'a' displays all connections, 'n' displays port numbers in numerical form (does not translate them), 'o' displays owning process IDs</answer>
+      <wrong>'a' displays the routing table, 'n' displays fully qualified domain names ,'o' displays NetworkDirect connections</wrong>
+      <wrong>The switch options do nothing</wrong>
+      <wrong>'a' displays the active connections, 'n' displays network connection attempts ,'o' displays optional information</wrong>
+    </question>
+    <question>
+      <text>What port are you connected to in step 11?</text>
+      <type>multiple</type>
+      <answer>5985</answer>
+      <wrong>445</wrong>
+      <wrong>3389</wrong>
+      <wrong>139</wrong>
+    </question>
+    <question>
+      <text>What is the major version of the operating system you are connected to?</text>
+      <type>multiple</type>
+      <answer>The major version is 10. This means that the OS is either Windows 10 or Server 2016</answer>
+      <wrong>The major version is 6. This means that the OS is either Windows Vista-8.1 or Server 2008-2012R2</wrong>
+      <wrong>The major version is 5. This means that the OS is either Windows XP or Server 2003</wrong>
+      <wrong>The major version is 4. This means that the OS is either Windows 2000 or Windows NT</wrong>
+    </question>
+    <question>
+      <text>What is WMI?</text>
+      <type>multiple</type>
+      <answer>WMI is a method of communication with the Windows OS that allows easy access to management functions</answer>
+      <wrong>WMI is a security model that interfaces with the Universal Windows Framework (UWF)</wrong>
+      <wrong>WMI is used to create and manage security-based Dynamically Loaded Libraries (DLLs) in System32</wrong>
+      <wrong>WMI is a simple method of interacting with the Client/Server Runtime Subsystem (csrss.exe)</wrong>
+    </question>
+    <question>
+      <text>What is an alias for the PowerShell cmdlet Format-List?</text>
+      <type>multiple</type>
+      <answer>fl</answer>
+      <wrong>fo-li</wrong>
+      <wrong>format</wrong>
+      <wrong>list-all</wrong>
+    </question>
+    <question>
+      <text>is the command "help" in PowerShell an alias or a cmdlet? If it is an alias, what does it alias?</text>
+      <type>multiple</type>
+      <answer>Alias for the Get-Help cmdlet</answer>
+      <wrong>Alias for the Display-Help cmdlet</wrong>
+      <wrong>Alias for the Cmd-Info cmdlet</wrong>
+      <wrong>Not an alias</wrong>
+    </question>
+    <question>
+      <text>What cmdlet did you use to get a process list in step 20?</text>
+      <type>multiple</type>
+      <answer>Get-Process</answer>
+      <wrong>pslist</wrong>
+      <wrong>tasklist /svc</wrong>
+      <wrong>List-Processes</wrong>
+    </question>
+    <question>
+      <text>How many SVCHOST processes are found as a result of the output in step 22?</text>
+      <type>multiple</type>
+      <answer>15</answer>
+      <wrong>1</wrong>
+      <wrong>3</wrong>
+      <wrong>19</wrong>
+    </question>
+  </exercise>
+</exercises>

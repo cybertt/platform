@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Black Vine Cyber Espionage Group</title>
+    <difficulty>1</difficulty>
+    <category>Analysis</category>
+    <name>black_vine</name>
+    <dependencies></dependencies>
+    <shortdescription>Read and analyze the Black Vine Cyber Espionage Group Report.</shortdescription>
+    <description>Read the Black Vine Report to understand one set of TTPs(tactics, techniques, procedures), belonging to a nation states cyber actors. </description>
+    <tutorial>&lt;ol&gt;&#xD;
+&lt;li&gt;On your defensive workstation, open the ShareFiles drive, and Vendor Reports Directory.&lt;/li&gt;&#xD;
+&lt;li&gt;Select the Black Vine Cyber Espionage Group&lt;/li&gt;&#xD;
+&lt;li&gt;Read and analyze the report to answer the questions below.&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <question>
+      <text>Black Vine uses the Elderwood Framework, which distributes zero-day exploits to its targets. What is the Elderwood framework?</text>
+      <type>multiple</type>
+      <answer>A combination of spear phishing emails, and watering holes that require the delivery of a trojan to infect the targeted computer.</answer>
+      <wrong>Watering holes used to lure targets in and exploit them via iframes.</wrong>
+    </question>
+    <question>
+      <text>What is Black Vines custom-developed malware?</text>
+      <type>multiple</type>
+      <answer>Sakurel, Hurix, and Mivast</answer>
+      <wrong>Vaisport, Naid, and Briba</wrong>
+    </question>
+    <question>
+      <text>What location does the trojan Sakurel copy itself too?</text>
+      <type>multiple</type>
+      <answer>%Temp%\MicroMedia\MediaCenter.exe </answer>
+      <wrong>%Temp%\MicroMedia\MedaCenter.exe </wrong>
+    </question>
+    <question>
+      <text>What server does Sakurel connect to and then open a remote shell?</text>
+      <type>multiple</type>
+      <answer>oa.ameteksen.com</answer>
+      <wrong>nioc.ru</wrong>
+    </question>
+    <question>
+      <text>How does Sakurel stay persistent on an infected target past reboot?</text>
+      <type>multiple</type>
+      <answer>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\MicroMedia = Temp\MicroMedia\MediaCenter.exe</answer>
+      <wrong>HKEY_CLASSES_ROOT\SECURE.SecureCtrl.1\CLSID\"(Default)" = "{9A2AA809-5F01-456E-883F-F37C1513FEF7}" </wrong>
+    </question>
+    <question>
+      <text>When backdoor.mivast is executed, what is one of the files it creates?</text>
+      <type>multiple</type>
+      <answer>%Temp%\setup.msi</answer>
+      <wrong>%Temp%\ss.exe</wrong>
+    </question>
+    <question>
+      <text>What is one of the locations Mivast may connect back to?</text>
+      <type>multiple</type>
+      <answer>sb-ssl.google.com:80</answer>
+      <wrong>sharepoint-vaet.com:8080</wrong>
+    </question>
+    <question>
+      <text>Does Sakurel and Mivast work on Windows 10?</text>
+      <type>multiple</type>
+      <answer>No</answer>
+      <wrong>Yes</wrong>
+    </question>
+    <question>
+      <text>Who(m) signs the digital certificates for the malware used by Black Vine?</text>
+      <type>multiple</type>
+      <answer>DTOPTOOLZ Co or MICRO DIGITAL INC</answer>
+      <wrong>Verisign</wrong>
+    </question>
+    <question>
+      <text>What is one of the c&amp;c domains used?</text>
+      <type>multiple</type>
+      <answer>web.viprclod.com</answer>
+      <wrong>vipercloud.com</wrong>
+    </question>
+    <question>
+      <text>How did Symantec associate Topsec Network Security with the Anthem breach?</text>
+      <type>multiple</type>
+      <answer>The domain topsec2014.com was registered to 192.199.254.126 around the same time that Miravast called back to C&amp;C infrastructure hosted on the same IP address.</answer>
+      <wrong>A reverse dns lookup of 192.199.254.126 resolved to just one domain: topsec.com.</wrong>
+    </question>
+    <question>
+      <text>What industries were/are affected by Black Vine?</text>
+      <type>multiple</type>
+      <answer>aerospace, energy, and healthcare</answer>
+      <wrong>aerospace, technology, and auto</wrong>
+    </question>
+    <question>
+      <text>When was Black Vine first seen?</text>
+      <type>multiple</type>
+      <answer>2012</answer>
+      <wrong>2011</wrong>
+    </question>
+    <question>
+      <text>What city is Black Vine attributed to?</text>
+      <type>multiple</type>
+      <answer>Beijing</answer>
+      <wrong>Hong Kong</wrong>
+    </question>
+  </exercise>
+</exercises>

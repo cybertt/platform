@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Unix Survey</title>
+    <difficulty>1</difficulty>
+    <category>CNE</category>
+    <name>unix_survey</name>
+    <dependencies>Malware_Analysis_P1,Malware_Analysis_P2,Malware_Analysis_P3,Malware_Analysis_P4</dependencies>
+    <shortdescription>Simple survey to enumerate a Linux host.</shortdescription>
+    <description>Simple survey to enumerate a Linux host.</description>
+    <tutorial>&lt;p&gt;Open up a workstation and&amp;nbsp;utilize putty to ssh into Kali box.&amp;nbsp; Run the following surevy commands and interpret their output.&amp;nbsp; Use "man [command]" for more information or research online.&amp;nbsp; The post exercise questions will need to be answered based on results from the survey.&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;id&lt;/strong&gt;" - Print user and group IDs&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;w&lt;/strong&gt;" - Display who's logged in&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;pwd&lt;/strong&gt;" - Print current working directory&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;ls -alrt&lt;/strong&gt;" - List all files sorted in reverse time order&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;ls -alrt /&lt;/strong&gt;" - List files in root directory&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;ls -alrt /tmp&lt;/strong&gt;" - List files in /tmp&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;ls -alrt /var&lt;/strong&gt;" - List files in /var&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;ls -alrt /var/log&lt;/strong&gt;" - List files in /var/log&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;dmesg&lt;/strong&gt;" - Display the kernel log buffer&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;ps -ef --sort start_time&lt;/strong&gt;" - Dispaly all processes sorted in reverse time order&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;netstat -antup&lt;/strong&gt;" - Display all TCP and UDP network sockets with their associated process&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;netstat -antup | grep EST&lt;/strong&gt;" - Display established connections&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;netstat -antup | grep LIST&lt;/strong&gt;" - Display listening connections&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;df -h&lt;/strong&gt;" - Display filesystems with "human readable" storage sizes&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;cat /proc/cpuinfo&lt;/strong&gt;" - Display CPU information&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;cat /proc/meminfo&lt;/strong&gt;" - Display memory information&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;"&lt;strong&gt;uname -a&lt;/strong&gt;" - Shows kernel build information&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;"&lt;strong&gt;ls -al /home/*/.*history&lt;/strong&gt;" - Show user shell history files&lt;/p&gt;&#xD;
+&lt;p&gt;"&lt;strong&gt;ls -al /root/.*history&lt;/strong&gt;" - Show root's shell history file&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</tutorial>
+    <question>
+      <text>Which of the following is *not* in the output of 'w'?</text>
+      <type>multiple</type>
+      <answer>CPU Utilization</answer>
+      <wrong>Logged-in Users</wrong>
+    </question>
+    <question>
+      <text>What are your user and group IDs?</text>
+      <type>multiple</type>
+      <answer>0, 0</answer>
+      <wrong>0, 1</wrong>
+      <wrong>1, 1</wrong>
+      <wrong>3, 1</wrong>
+    </question>
+    <question>
+      <text>Which log message type appears in /var/log/secure?</text>
+      <type>multiple</type>
+      <answer>User Logins</answer>
+      <wrong>Network Adapter Up/Down Messages</wrong>
+    </question>
+    <question>
+      <text>Are there any established connections?</text>
+      <type>multiple</type>
+      <answer>Yes</answer>
+      <wrong>No</wrong>
+    </question>
+    <question>
+      <text>What time zone is the machine configured for?</text>
+      <type>multiple</type>
+      <answer>EDT</answer>
+      <wrong>EST</wrong>
+      <wrong>MST</wrong>
+      <wrong>PST</wrong>
+    </question>
+    <question>
+      <text>What is the model of the CPU?</text>
+      <type>multiple</type>
+      <answer>AMD Opteron</answer>
+      <wrong>Celeron</wrong>
+      <wrong>Skynet</wrong>
+      <wrong>HP Optimus</wrong>
+    </question>
+    <question>
+      <text>What is the kernel verison?</text>
+      <type>multiple</type>
+      <answer>Debian 4.3.3</answer>
+      <wrong>Sebian 4.3.3</wrong>
+      <wrong>Lebian 4.3.3</wrong>
+      <wrong>Zebian 4.3.3</wrong>
+    </question>
+  </exercise>
+</exercises>

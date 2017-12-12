@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>DNS Poisoning</title>
+    <difficulty>2</difficulty>
+    <category>CNE</category>
+    <name>dns_poisoning</name>
+    <dependencies>ssh_tunneling</dependencies>
+    <shortdescription>Attack using DNS poisoning</shortdescription>
+    <description>Attack using DNS poisoning</description>
+    <tutorial>&lt;ol&gt;&#xD;
+&lt;li&gt;Start by creating an ssh tunnel to the external DNS server as shown in SSH Tunneling exercise.&lt;/li&gt;&#xD;
+&lt;li&gt;Choose a website to phish. For example, you can use usaa.com, facebook.com, bankofamerica.com, etc. Be creative and choose a website that users have to login to. From this point forward, the exercise will reference the exercise you chose as . When you see , replace that value with the website you chose (e.g. navyfederal.org).&lt;/li&gt;&#xD;
+&lt;li&gt;Now we get to have all kinds of fun with dnscmd, my favorite program of all time. We are going to spoof navyfederal.org. Use the following syntax to add a DNS zone on the external DNS server: dnscmd 127.0.0.1 /zoneadd&amp;nbsp;&amp;nbsp;/primary. You just created a new DNS zone claiming to have knowledge of the whereabouts of servers in the&amp;nbsp;&amp;nbsp;domain.&lt;/li&gt;&#xD;
+&lt;li&gt;Use the following syntax to point queries in that zone to your offensive web server:&lt;/li&gt;&#xD;
+&lt;li&gt;dnscmd 127.0.0.1 /recordadd&amp;nbsp;&amp;nbsp;@ A 192.16.0.4&lt;/li&gt;&#xD;
+&lt;li&gt;dnscmd 127.0.0.1 /recordadd&amp;nbsp;&amp;nbsp;www A 192.16.0.4&lt;/li&gt;&#xD;
+&lt;li&gt;Now both&amp;nbsp;&amp;nbsp;and www.&amp;nbsp;point to your webserver.&lt;/li&gt;&#xD;
+&lt;li&gt;When I get around to it I will explain the php and web server setup and go more in depth with dnscmd.&lt;/li&gt;&#xD;
+&lt;li&gt;Send an enticing email to a defense network user asking them to log into navyfederal.org and provide a link to http://&amp;nbsp;or http://www.&lt;/li&gt;&#xD;
+&lt;li&gt;Have the defense user follow the link and log in to the super realistic navy fed site set up.&lt;/li&gt;&#xD;
+&lt;li&gt;Check the attacker's email.&lt;/li&gt;&#xD;
+&lt;li&gt;IMPORTANT! Delete the zone you have created by running: dnscmd /zonedelete&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <question>
+      <text>Does a DNS FORWARD LOOKUP use a connectionless or connection-oriented protocol?</text>
+      <type>multiple</type>
+      <answer>Connectionless</answer>
+      <wrong>Connection Oriented</wrong>
+      <wrong>Connectionless, unless you are performing a zone transfer</wrong>
+      <wrong>Both. A connectionless protocol is used to establish a TCP session, then a connection-oriented protocol is used to transfer data</wrong>
+    </question>
+    <question>
+      <text>When a client computer is trying to resolve a FQDN, where will it look first?</text>
+      <type>multiple</type>
+      <answer>The hosts file or equivalent</answer>
+      <wrong>The local DNS cache or equivalent</wrong>
+      <wrong>The LMHOSTS file or a WINS Server</wrong>
+      <wrong>The DNS Server shown in ipconfig /all, /etc/resolv.conf, or equivalent</wrong>
+    </question>
+    <question>
+      <text>Which of the following statements about DNS is FALSE?</text>
+      <type>multiple</type>
+      <answer>DNS uses a series of closed-source proprietary protocols to communicate with servers in order to maintain a database of hostname to IP address translations</answer>
+      <wrong>It would be difficult to remember the IP addresses of every server you are trying to communicate with, and DNS solves this by maintaining human-readable hostnames to IP address translations</wrong>
+      <wrong>The correct order of DNS lookup sources is: hosts file -&gt; local DNS cache -&gt; primary DNS server -&gt; secondary DNS server</wrong>
+      <wrong>DNS entries are used to provide the location of email servers in a domain</wrong>
+    </question>
+  </exercise>
+</exercises>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Test 1</title>
+    <difficulty>1</difficulty>
+    <name>Test1</name>
+    <shortdescription>lekjre;lakrje</shortdescription>
+    <description>lkera;lkjerq</description>
+    <tutorial>&lt;p&gt;wow&lt;/p&gt;</tutorial>
+    <question>
+      <text>where</text>
+      <answer>when</answer>
+      <wrong>1</wrong>
+    </question>
+  </exercise>
+</exercises>

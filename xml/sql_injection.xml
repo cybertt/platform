@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>SQL Injection</title>
+    <difficulty>1</difficulty>
+    <category>CNE</category>
+    <name>sql_injection</name>
+    <dependencies>netcat</dependencies>
+    <shortdescription>Use SQL injection to dump a database</shortdescription>
+    <description>Use SQL injection to dump a database</description>
+    <tutorial>&lt;p&gt;Simple SQL Injection. We have gathered intel indicating that the target has a vulnerable SQL database in use on their web server. After executing a dictionary attack, the user name and password to log into the server were guessed as- User ID: admin | Password: password&lt;/p&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;Navigate to http://web.defense.net&lt;/li&gt;&#xD;
+&lt;li&gt;Log in using the credentials listed above.&lt;/li&gt;&#xD;
+&lt;li&gt;Click on "SQL Injection" at the left.&lt;/li&gt;&#xD;
+&lt;li&gt;Type the following string into the box labeled "User ID" and click submit: ' UNION SELECT null,CONCAT(0x0a,0x0a,first_name," ",last_name,0x0a,user,0x0a,password) FROM users #&lt;/li&gt;&#xD;
+&lt;li&gt;Take note of the entries that get dumped concept: this insecure SQL server is set up with the following entry: "SELECT first_name, last_name FROM users WHERE user_id = '$id'"; where '$id' represents the number you type in the box. it is designed to show the first and last names of users based on their user id. by closing the field for input with an apostrophe ('), you end the statement and then use UNION (and) to add any command you want such as SELECT and CONCAT (concatenate). This allows you to dump any fields from the entire table and view them on the screen.&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <video>https://www.youtube.com/embed/h-9rHTLHJTY</video>
+    <question>
+      <text>What credentials did you get from the database?</text>
+      <type>multiple</type>
+      <answer>vyos:vyos</answer>
+      <wrong>admin:password</wrong>
+      <wrong>Administrator:abc123!!!</wrong>
+      <wrong>defender#:P@ssw0rd</wrong>
+    </question>
+    <question>
+      <text>Why did you input the apostrophe at the beginning of your query?</text>
+      <type>multiple</type>
+      <answer>To close out the initial SELECT command</answer>
+      <wrong>SQL queries need to be inside quotes</wrong>
+      <wrong>To escape the space at the beginning of the query</wrong>
+      <wrong>the ' exploits the database</wrong>
+    </question>
+    <question>
+      <text>What action does the "UNION" command perform?</text>
+      <type>multiple</type>
+      <answer>It appends another command to the query, like SELECT</answer>
+      <wrong>Nothing. UNION SELECT is a single command</wrong>
+      <wrong>allows the combination of multiple values to a single SELECT command</wrong>
+      <wrong>escalates privileges to run the query</wrong>
+    </question>
+    <question>
+      <text>What action does "SELECT null" perform?</text>
+      <type>multiple</type>
+      <answer>it chooses nothing from the database</answer>
+      <wrong>send selections to dev&gt;null</wrong>
+      <wrong>searches for the value "null" in the database</wrong>
+      <wrong>it stops the previous SELECT statement from performing any action</wrong>
+    </question>
+  </exercise>
+</exercises>

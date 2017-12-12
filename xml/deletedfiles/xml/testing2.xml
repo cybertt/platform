@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Testing2</title>
+    <difficulty>0</difficulty>
+    <category>informational</category>
+    <name>testing2</name>
+    <shortdescription>This exercise is for testing purposes only</shortdescription>
+    <description>This exercise is for testing purposes only also</description>
+    <tutorial>&lt;p&gt;This exercise is for testing purposes only&lt;/p&gt;</tutorial>
+    <question>
+      <text>Type the word "test" and submit</text>
+      <type>shortanswer</type>
+      <answer>test</answer>
+    </question>
+  </exercise>
+</exercises>

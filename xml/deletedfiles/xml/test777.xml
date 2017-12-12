@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>test777</title>
+    <difficulty>0</difficulty>
+    <category>informational</category>
+    <name>test777</name>
+    <dependencies>test777</dependencies>
+    <shortdescription>test777</shortdescription>
+    <description>test777</description>
+    <tutorial>&lt;p&gt;test777&lt;/p&gt;</tutorial>
+    <question>
+      <text>test777</text>
+      <type>multiple</type>
+      <answer>test777</answer>
+      <wrong>dsfdsfdsf</wrong>
+    </question>
+  </exercise>
+</exercises>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Language Testing</title>
+    <difficulty>0</difficulty>
+    <category>Informational</category>
+    <name>languagetest2</name>
+    <dependencies></dependencies>
+    <shortdescription>Try me and report bugs</shortdescription>
+    <description>Try me and report bugs</description>
+    <tutorial>&lt;p&gt;languagetest2&lt;/p&gt;</tutorial>
+    <question>
+      <text>output abc1234 in C++</text>
+      <type>language</type>
+      <answer>abc1234</answer>
+      <code>C++</code>
+    </question>
+    <question>
+      <text>output abc123 in Python</text>
+      <type>language</type>
+      <answer>abc123</answer>
+      <code>Python</code>
+    </question>
+    <question>
+      <text>Output abc in bash</text>
+      <type>language</type>
+      <answer>abc</answer>
+      <code>Bash</code>
+    </question>
+    <question>
+      <text>Output 3333 in powershell</text>
+      <type>language</type>
+      <answer>3333</answer>
+      <code>PowerShell</code>
+    </question>
+  </exercise>
+</exercises>

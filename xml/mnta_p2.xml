@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Malicious Traffic Analysis - Part 2</title>
+    <difficulty>2</difficulty>
+    <category>Analysis</category>
+    <name>mnta_p2</name>
+    <dependencies>mnta_p1</dependencies>
+    <shortdescription>Analyze the traffic of six malicious emails. Determine which one caused the infection. </shortdescription>
+    <description>Analyze the traffic of six malicious emails. Determine which one caused the infection. </description>
+    <tutorial>&lt;p&gt;There is a pcap of infected traffic that contains six malicious emails. Figure out which of the six emails caused the infection traffic.&lt;/p&gt;&#xD;
+&lt;p&gt;Analyze the pcap named malicious_traffic_p2.pcap and answer the questions below.&lt;/p&gt;</tutorial>
+    <question>
+      <text>What is the IP of the infected host?</text>
+      <type>shortanswer</type>
+      <answer>172.16.1.126</answer>
+    </question>
+    <question>
+      <text>What is the MAC address of the infected host?</text>
+      <type>shortanswer</type>
+      <answer>00:50:8b:ab:2e:3c</answer>
+    </question>
+    <question>
+      <text>What is the user of the infect host? Provide first and last name</text>
+      <type>shortanswer</type>
+      <answer>Nick Chevotarevich</answer>
+    </question>
+    <question>
+      <text>What email attachment caused the infection?</text>
+      <type>shortanswer</type>
+      <answer>FedEx_ID_00000611231.zip</answer>
+    </question>
+    <question>
+      <text>What is the name of the extracted file from the attachment?</text>
+      <type>shortanswer</type>
+      <answer>FedEx_ID_00000611231.doc.js</answer>
+    </question>
+    <question>
+      <text>What is the name of the Trojan the attachment installed?</text>
+      <type>shortanswer</type>
+      <answer>Nemucod</answer>
+    </question>
+  </exercise>
+</exercises>

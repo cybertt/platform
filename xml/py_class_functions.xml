@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Classes and Functions</title>
+    <difficulty>1</difficulty>
+    <category>Programming</category>
+    <name>py_class_functions</name>
+    <dependencies></dependencies>
+    <shortdescription>Write your first class and function in Python.</shortdescription>
+    <description>This exercise will get you to write your first python class and functions, by creating a calculator.</description>
+    <tutorial>&lt;p&gt;One of the most important things to understand in programming is the use of classes and functions and what their purpose is. Functions are almost self explanatory by their name. When you are writing a function, you are seeking it to do something for you or for the program. They allow for sections of code to be grouped better and so that you don&amp;rsquo;t have to have the same sections of code multiple times throughout your program. You can have one section of code within a function, that you will call throughout the life cycle of your program.&lt;/p&gt;&#xD;
+&lt;p&gt;Here is the basic format of a class with a function inside, along with how to execute it:&lt;/p&gt;&#xD;
+&lt;p&gt;--------------------------------------------------------------------&lt;/p&gt;&#xD;
+&lt;p&gt;class Simple_Class:&lt;/p&gt;&#xD;
+&lt;p&gt;//You always have to initialize a class first with an __init__ function.&lt;/p&gt;&#xD;
+&lt;p&gt;//The first argument must always be a reference to itself(the instance of the class) with the word 'self'.&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 30px;"&gt;def __init__(self, input_a, input_b):&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;self.a = input_a&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;self.b = input_b&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 30px;"&gt;def basic_function(self, argument1, argument2):&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;Perform this action&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;Perform another action&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;&amp;hellip;&amp;hellip;..&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;Return&lt;/p&gt;&#xD;
+&lt;p style="padding-left: 60px;"&gt;//This needs to be what you want the function to return to whatever line is calling it. In other words, it can return a number, a string, a dictionary, a list, literally any data type that you need the function to return.&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p&gt;newClass = Simple_Class(first_input, second_input)&lt;/p&gt;&#xD;
+&lt;p&gt;Print &amp;lsquo;something %s&amp;rsquo; %newClass.basic_function()&lt;/p&gt;&#xD;
+&lt;p&gt;-----------------------------------------------------------------------------&lt;/p&gt;&#xD;
+&lt;p&gt;As usual, you will need to do some research on your own to get a good grasp of classes and functions in Python. So please check out the link below and the helper video. They are for your benefit.&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Helpful Links:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;https://www.tutorialspoint.com/python/python_classes_objects.htm&lt;/p&gt;&#xD;
+&lt;p&gt;https://www.tutorialspoint.com/python/python_functions.htm&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Exercise Task:&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;Create a simple calculator through the use of a class and functions. Your calculator should perform the following functions:&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Multiplication&lt;/li&gt;&#xD;
+&lt;li&gt;Division&lt;/li&gt;&#xD;
+&lt;li&gt;Addition&lt;/li&gt;&#xD;
+&lt;li&gt;Subtraction&lt;/li&gt;&#xD;
+&lt;/ul&gt;</tutorial>
+    <video>https://www.youtube.com/embed/ZDa-Z5JzLYM</video>
+    <question>
+      <text>Upload your code here.</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+    <question>
+      <text>Upload a screenshot of your code working here.</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+  </exercise>
+</exercises>

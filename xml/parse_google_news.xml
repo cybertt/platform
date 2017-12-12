@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Parse Google News</title>
+    <difficulty>3</difficulty>
+    <category>Programming</category>
+    <name>parse_google_news</name>
+    <dependencies></dependencies>
+    <shortdescription>Scrape Google News Headlines with Python</shortdescription>
+    <description>Through Python libraries, scrape Google News for only the headlines of the day and output them to a text file.</description>
+    <tutorial>&lt;ol&gt;&#xD;
+&lt;li&gt;Use Python to parse through Google News for only the headlines.&lt;/li&gt;&#xD;
+&lt;li&gt;After scraping the headlines, write them to a text file.&lt;/li&gt;&#xD;
+&lt;li&gt;Make sure the text file is readable and show to leadership.&lt;/li&gt;&#xD;
+&lt;li&gt;Email your code to the Adelphi Training Team at adelphi-training-team@googlegroups.com&amp;nbsp;for code review. Use your N57 email.&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <video>https://www.youtube.com/embed/3xQTJi2tqgk</video>
+    <question>
+      <text>Why is Python better than .NET, .VBS or Powershell?</text>
+      <type>multiple</type>
+      <answer>More efficient, more powerful set of libraries, etc. Just all around a bad ass programming language.</answer>
+      <wrong>It isn't.</wrong>
+    </question>
+    <question>
+      <text>Upload your code below</text>
+      <type>upload</type>
+      <answer>Yes</answer>
+    </question>
+    <question>
+      <text>Take a screen shot of your code output and upload it.</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+  </exercise>
+</exercises>

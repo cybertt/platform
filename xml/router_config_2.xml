@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Router Config - 2</title>
+    <difficulty>1</difficulty>
+    <category>CND</category>
+    <name>router_config_2</name>
+    <dependencies>router_config_1</dependencies>
+    <shortdescription>Refresher on reading router configurations.</shortdescription>
+    <description>Router configuration exercise meant to refresh your understanding of how to read router configurations. Similar in difficulty to the first router config exercise.</description>
+    <tutorial>&lt;p&gt;Given four separate router configurations, construct a network map connecting all the devices to the internet. The map must include AS (autonomous system), hostnames, interface labels and IP addresses.&lt;/p&gt;&#xD;
+&lt;p&gt;On the share in your defensive workstation, open the Networking &amp;gt; Router_Config_2 folder to access the router config files. Analyze them and answer the questions below. For the network map, take a screenshot or save an image of your map and upload in the last question.&lt;/p&gt;</tutorial>
+    <question>
+      <text>What routing protocol is being used?</text>
+      <type>shortanswer</type>
+      <answer>EIGRP</answer>
+    </question>
+    <question>
+      <text>Using the router configuration for R1, what are the usable IPs that exist on interface Ethernet0/2? Separate the IPs by a comma.</text>
+      <type>shortanswer</type>
+      <answer>172.16.2.1,172.16.2.2</answer>
+    </question>
+    <question>
+      <text>Using the router configuration for R1, subnet "ip dhcp pool VLAN10", what is the IP address range? Answer format: 1.1.1.0 - 1.1.1.63</text>
+      <type>shortanswer</type>
+      <answer>192.168.10.0 - 192.168.10.255</answer>
+    </question>
+    <question>
+      <text>Using the router configuration for R1, subnet "ip dhcp pool VLAN10", what is the CIDR?</text>
+      <type>shortanswer</type>
+      <answer>/24</answer>
+    </question>
+    <question>
+      <text>Using the router configuration for R1, subnet "ip dhcp pool VLAN10", what is the first host address?</text>
+      <type>shortanswer</type>
+      <answer>192.168.10.1</answer>
+    </question>
+    <question>
+      <text>Using the router configuration for R1, subnet "ip dhcp pool VLAN10", what is the last host address?</text>
+      <type>shortanswer</type>
+      <answer>192.168.10.254</answer>
+    </question>
+    <question>
+      <text>Using the router configuration for R1, subnet "ip dhcp pool VLAN10", what is the subnet address?</text>
+      <type>shortanswer</type>
+      <answer>192.168.10.0</answer>
+    </question>
+    <question>
+      <text>Using the router configuration for R1, subnet "ip dhcp pool VLAN10", what is the broadcast address?</text>
+      <type>shortanswer</type>
+      <answer>192.168.10.255</answer>
+    </question>
+    <question>
+      <text>Using the router configuration for R1, subnet "ip dhcp pool VLAN10", how many usable host addresses are there?</text>
+      <type>shortanswer</type>
+      <answer>254</answer>
+    </question>
+    <question>
+      <text>Using the router configuration for R4, is network address translation taking place?</text>
+      <type>shortanswer</type>
+      <answer>Yes</answer>
+    </question>
+    <question>
+      <text>Which router is directly connected to the internet service provider? i.e. R1, R2, R3, R4, etc.</text>
+      <type>shortanswer</type>
+      <answer>R4</answer>
+    </question>
+    <question>
+      <text>Take a screenshot or save an image of your network map and upload below.</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+  </exercise>
+</exercises>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>te3st</title>
+    <difficulty>0</difficulty>
+    <category>Informational</category>
+    <name>te3st</name>
+    <dependencies></dependencies>
+    <shortdescription>te3st</shortdescription>
+    <description>te3st</description>
+    <tutorial>&lt;p&gt;te3st&lt;/p&gt;</tutorial>
+    <question>
+      <text>te3st</text>
+      <type>multiple</type>
+      <answer>te3st</answer>
+      <wrong>te3st</wrong>
+      <wrong>te3st</wrong>
+      <wrong>te3st</wrong>
+    </question>
+  </exercise>
+</exercises>

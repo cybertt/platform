@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Browser Autopwn</title>
+	<dependencies>Malware_Analysis_P1,Malware_Analysis_P2,Malware_Analysis_P3,Malware_Analysis_P4</dependencies>
+    <difficulty>1</difficulty>
+	<category>CNE</category>
+    <name>browser_autopwn</name>
+    <shortdescription>Execute the browser_autopwn exploit against a target.</shortdescription>
+    <description>Execute the browser autopwn exploit against your defense workstation.</description>
+    <tutorial>&lt;p&gt;Browser Autopwn is an auxiliary module provided by Metasploit that allows you to automate an attack on a victim machine simply when they access a webpage.&lt;/p&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;ssh into the Kali workstation.&lt;/li&gt;&#xD;
+&lt;li&gt;Launch a msfconsole&lt;/li&gt;&#xD;
+&lt;li&gt;Find the autopwn module&lt;/li&gt;&#xD;
+&lt;li&gt;Set the payload to windows_reverse_tcp. This will set up a connection back to us if the exploit is successful.&lt;/li&gt;&#xD;
+&lt;li&gt;Aim the exploit at the defensive workstation.&lt;/li&gt;&#xD;
+&lt;li&gt;Execute the autopwn module after you set all relevant options.&lt;/li&gt;&#xD;
+&lt;li&gt;On your defensive workstation, open a browser to the URIPATH you set.&lt;/li&gt;&#xD;
+&lt;li&gt;Run netstat on your Kali workstation to ensure a connection was made.&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <video>https://www.youtube.com/embed/aNsU1hg_xkQ</video>
+        <question>
+	  <type>multiple</type>
+      <text>How does browser_autopwn work? Against what browsers?</text>
+      <answer>Browser_Autopwn fingerprints the OS and browser first, and then selects only the browser exploits that would likely be successful for the browser version that exists on the client side.</answer>
+      <wrong>Browser_Autopwn only works for Internet Explorer version 5.0+.</wrong>
+      <wrong>Browser_Autopwn acts as a cluster bomb and just throws all available exploits at a Client's browser.</wrong>
+    </question>
+  </exercise>
+</exercises>

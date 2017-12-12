@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Rocket Kitten Report</title>
+    <difficulty>1</difficulty>
+    <category>Analysis</category>
+    <name>rocket_kitten</name>
+    <dependencies></dependencies>
+    <shortdescription>Rocket Kitten Checkpoint Report</shortdescription>
+    <description>Read the Rocket Kitten Report to understand one set of TTPs(tactics, techniques, procedures), belonging to a nation states cyber actors. </description>
+    <tutorial>&lt;ol&gt;&#xD;
+&lt;li&gt;Open the ShareFiles drive on your defensive workstation, and then the Vendor Reports Directory.&lt;/li&gt;&#xD;
+&lt;li&gt;Select Rocket Kitten Report.&lt;/li&gt;&#xD;
+&lt;li&gt;Read and analyze the report to answer the questions below.&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <question>
+      <text>What country does this APT group belong to?</text>
+      <type>multiple</type>
+      <answer>Iran</answer>
+      <wrong>China</wrong>
+      <wrong>Russia</wrong>
+      <wrong>North Korea</wrong>
+    </question>
+    <question>
+      <text>How long has the malware been around?</text>
+      <type>multiple</type>
+      <answer>Since 2011</answer>
+      <wrong>Since the advent of the internet</wrong>
+      <wrong>Since January 2016</wrong>
+      <wrong>Since January 2000</wrong>
+    </question>
+    <question>
+      <text>What exploitation methods does Rocket Kitten use?</text>
+      <type>multiple</type>
+      <answer>Spear phishing</answer>
+      <wrong>Whaling</wrong>
+      <wrong>Brute Force</wrong>
+      <wrong>Privilege Escalation</wrong>
+    </question>
+    <question>
+      <text>What email was used to retrieve stolen credentials by the FireMalv tool?</text>
+      <type>multiple</type>
+      <answer>wool3n.h4t@gmail.com</answer>
+      <wrong>sumtingwong@gmail.com</wrong>
+      <wrong>cwoolger@gmail.com</wrong>
+      <wrong>gholee@gmail.com</wrong>
+    </question>
+    <question>
+      <text>&#x201C;A deeper look into ClearSky&#x2019;s &#x2018;Gholee&#x2019; determined it is the &#x2018;wrapper&#x2019; component of an off-the-shelf penetration testing tool &#x2026;&#x201D; -- What does the report mean when it uses the term &#x2018;wrapper&#x2019; in this context?</text>
+      <type>multiple</type>
+      <answer>A subroutine used to change an existing class or interface.</answer>
+      <wrong>A function that 'wraps' an already existing function inside it.</wrong>
+      <wrong>A variable that is instantiated by the output of a program.</wrong>
+      <wrong>Data that frames the main data, but does not change the main data.</wrong>
+    </question>
+    <question>
+      <text>The Rocket Kitten APT Group has been caught a lot previously and currently. Very little modifications are done to temporarily avoid detection. What are some of those modifications?</text>
+      <type>multiple</type>
+      <answer>Renaming the wrapper function and renaming the domain name.</answer>
+      <wrong>Changing the MD5 hash of it's custom malware.</wrong>
+      <wrong>Changing the coding language of the malware from C++ to Perl.</wrong>
+    </question>
+    <question>
+      <text>What was one of the patterns the actors used to gain access to their target&#x2019;s account(s) and computer(s)?</text>
+      <type>multiple</type>
+      <answer>Tailored phone calls to their targets prompting them to give up their credentials by taking action on received emails. </answer>
+      <wrong>HTTP redirection</wrong>
+      <wrong>They only used spear-phishing.</wrong>
+      <wrong>They acted as federal officials telling the victims their accounts have been compromised.</wrong>
+    </question>
+    <question>
+      <text>What phishing webpages were used to steal users credentials?</text>
+      <type>multiple</type>
+      <answer>Google Password Reset and Google Login Page</answer>
+      <wrong>Yahoo Login Page and Yahoo Reset Page</wrong>
+      <wrong>Microsoft Login Page and Microsoft Password Reset Page</wrong>
+    </question>
+    <question>
+      <text>What was the RAT developed by Rocket Kitten?</text>
+      <type>multiple</type>
+      <answer>MPK</answer>
+      <wrong>Acunetix</wrong>
+      <wrong>Havij</wrong>
+    </question>
+    <question>
+      <text>What's the IP address of the MPK C&amp;C server?</text>
+      <type>multiple</type>
+      <answer>109.163.22.69</answer>
+      <wrong>109.169.61.8</wrong>
+      <wrong>109.169.22.71</wrong>
+      <wrong>162.223.90.148</wrong>
+    </question>
+    <question>
+      <text>What did Rocket Kitten use for their phishing web server?</text>
+      <type>multiple</type>
+      <answer>XAMPP</answer>
+      <wrong>Apache</wrong>
+      <wrong>IIS</wrong>
+    </question>
+    <question>
+      <text>What was so surprising about the phishing web server?</text>
+      <type>multiple</type>
+      <answer>Anyone could gain root access. Root did not have a password set.</answer>
+      <wrong>The password for super admin was 123456</wrong>
+      <wrong>All victims that were attacked were stored in the phishing web server.</wrong>
+      <wrong>The attackers infected their own computers during test runs.</wrong>
+    </question>
+    <question>
+      <text>How did Check Point find the official name of the main engineer of Rocket Kitten?</text>
+      <type>multiple</type>
+      <answer>Yaser Balaghi, gave a public SQL injection tutorial while logged in under his secret alias 'Wool3n.H4t'.</answer>
+      <wrong>His name was hard-coded in the CWoolger key logger.</wrong>
+      <wrong>He appeared in an Iranian programmers forum with the email 'yaserbalaghi@aol.com'</wrong>
+      <wrong>His name appears in one of the retrieved logs for the CWoolger key logger.</wrong>
+    </question>
+  </exercise>
+</exercises>

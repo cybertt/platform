@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>MS12_020 Exploit</title>
+	<dependencies>Malware_Analysis_P1,Malware_Analysis_P2,Malware_Analysis_P3,Malware_Analysis_P4</dependencies>
+    <difficulty>2</difficulty>
+	<category>CNE</category>
+    <name>ms12_020</name>
+    <shortdescription>Execute the MS12_020 Exploit</shortdescription>
+    <description>Exploit a Windows 7 machine with RDP running.</description>
+    <tutorial>&lt;ol&gt;&#xD;
+&lt;li&gt;On your defensive workstation enable RDP, if it is not already enabled.&lt;/li&gt;&#xD;
+&lt;li&gt;ssh into the Kali workstation.&lt;/li&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;192.20.128.11 with creds: root | P@ssw0rd&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&lt;li&gt;Launch the msfconsole&lt;/li&gt;&#xD;
+&lt;li&gt;search for the module containing 'ms12_020'.&lt;/li&gt;&#xD;
+&lt;li&gt;set the module.&lt;/li&gt;&#xD;
+&lt;li&gt;Set the appropriate options&lt;/li&gt;&#xD;
+&lt;li&gt;Exploit&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <question>
+      <text>What service does MS12_020 exploit?</text>
+      <type>shortanswer</type>
+      <answer>RDP</answer>
+    </question>
+  </exercise>
+</exercises>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Word Frequency w/Python</title>
+    <difficulty>2</difficulty>
+    <category>Programming</category>
+    <name>word_frequency</name>
+    <dependencies></dependencies>
+    <shortdescription>Calculate the frequency of words given as input with Python.</shortdescription>
+    <description>Calculate the frequency of words given as input with Python.</description>
+    <tutorial>&lt;p&gt;Write a program to compute the frequency of the words from the input. The output should output after sorting the key alphanumerically.&lt;/p&gt;&#xD;
+&lt;p&gt;Suppose the following input is supplied to the program:&lt;/p&gt;&#xD;
+&lt;p&gt;"I am new to Python and I know there is Python 2 and Python 3. Should I choose Python 2 or Python 3?"&lt;/p&gt;&#xD;
+&lt;p&gt;Output should be:&lt;/p&gt;&#xD;
+&lt;p&gt;2:2&lt;/p&gt;&#xD;
+&lt;p&gt;3:2&lt;/p&gt;&#xD;
+&lt;p&gt;new:1&lt;/p&gt;&#xD;
+&lt;p&gt;I:3&lt;/p&gt;&#xD;
+&lt;p&gt;etc...&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p&gt;Email the Adelphi Training Team at adelphi-training-team@googlegroups.com for code review when you are finished. Use your n57 email address.&lt;/p&gt;&#xD;
+&lt;p&gt;Input should be assumed to be console input.&lt;/p&gt;</tutorial>
+    <question>
+      <text>Were you able to write this successfully in less than 10 lines of code?</text>
+      <type>multiple</type>
+      <answer>Yes</answer>
+      <wrong>No</wrong>
+    </question>
+    <question>
+      <text>Did you email your code to the Adelphi Training Team for code review?</text>
+      <type>multiple</type>
+      <answer>Yes</answer>
+      <wrong>No</wrong>
+    </question>
+  </exercise>
+</exercises>

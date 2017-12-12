@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Base64 Decoder</title>
+    <difficulty>1</difficulty>
+    <category>Programming</category>
+    <name>base64_decoder</name>
+    <dependencies></dependencies>
+    <shortdescription>Decode Base64 code with Python.</shortdescription>
+    <description>Decode Base64 code with Python.</description>
+    <tutorial>&lt;p&gt;On your defensive workstation, first create the following python script to encode some data into Base64 (remember spaces are important in Python):&lt;/p&gt;&#xD;
+&lt;p&gt;----------------------------------------------------------------------------------------------------------------------------------------------------------------------&lt;/p&gt;&#xD;
+&lt;p&gt;import base64&lt;/p&gt;&#xD;
+&lt;p&gt;# Load this source file and strip the header.&lt;br /&gt;initial_data = open(__file__, 'rt').read().split('#end_pymotw_header')[1]&lt;/p&gt;&#xD;
+&lt;p&gt;encoded_data = base64.b64encode(initial_data)&lt;/p&gt;&#xD;
+&lt;p&gt;num_initial = len(initial_data)&lt;br /&gt;padding = { 0:0, 1:2, 2:1 }[num_initial % 3]&lt;/p&gt;&#xD;
+&lt;p&gt;print '%d bytes before encoding' % num_initial&lt;br /&gt;print 'Expect %d padding bytes' % padding&lt;br /&gt;print '%d bytes after encoding' % len(encoded_data)&lt;br /&gt;print&lt;br /&gt;#print encoded_data&lt;br /&gt;for i in xrange((len(encoded_data)/40)+1):&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; print encoded_data[i*40:(i+1)*40]&lt;/p&gt;&#xD;
+&lt;p&gt;-------------------------------------------------------------------------------------------------------------------------------------------------------------------&lt;/p&gt;&#xD;
+&lt;p&gt;Now write a Base64 decoder in Python to unscramble your original message.&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;For Help: Email your code to the Adelphi Training Team at adelphi-training-team@googlegroups.com. Use your N57 email address.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</tutorial>
+    <question>
+      <text>Upload your code below</text>
+      <type>upload</type>
+      <answer>Yes</answer>
+    </question>
+    <question>
+      <text>What function decodes Base64 in Python?</text>
+      <type>shortanswer</type>
+      <answer>b64decode</answer>
+    </question>
+  </exercise>
+</exercises>

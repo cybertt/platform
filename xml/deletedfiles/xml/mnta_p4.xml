@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Malicious Traffic Analysis - Part 4</title>
+	<dependencies>collateral_duty_script</dependencies>
+    <difficulty>3</difficulty>
+	<category>Analysis</category>
+    <name>mnta_p4</name>
+    <shortdescription>Analyze network traffic captured during a massive recon scan and attack.</shortdescription>
+    <description>Network traffic was captured against a "Big Bad Recon Scan". Analyze the traffic and determine who the attackers were and what was done against a network.</description>
+    <tutorial>&lt;p&gt;A new recon scan was released that supposedly makes it undetectable. Test your analytic skills against this type of attack.&lt;/p&gt;&#xD;
+&lt;p&gt;The company has the following details:&lt;/p&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;1 public IP address: 67.76.54.32&lt;/li&gt;&#xD;
+&lt;li&gt;1 corporate intranet&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;p&gt;Analyze the PCAP using Wireshark and answer the questions below.&lt;/p&gt;&#xD;
+</tutorial>
+    <question>
+	  <type>shortanswer</type>
+      <text>What was the second scan done against the router IP address: 67.76.54.32?</text>
+      <answer>OS Discovery</answer>
+    </question>
+    <question>
+	  <type>shortanswer</type>
+      <text>What were the two UDP ports scanned? Answer format: port # and port #</text>
+      <answer>port 35678 and port 43719</answer>
+    </question>
+    <question>
+	  <type>shortanswer</type>
+      <text>How many attackers were there?</text>
+      <answer>100</answer>
+    </question>
+    <question>
+	  <type>multiple</type>
+      <text>Was there a primary attacker?</text>
+      <answer>No</answer>
+      <wrong>yes</wrong>
+    </question>
+    <question>
+	  <type>shortanswer</type>
+      <text>What ports were found open? Answer format: "11, 12, 13, 14" -- pay attention the spaces after commas</text>
+      <answer>21, 25, 80, 110, 143, 995, 993</answer>
+    </question>
+    <question>
+	  <type>shortanswer</type>
+      <text>What protocol does the router respond to besides TCP/UDP?</text>
+      <answer>ICMP</answer>
+    </question>
+    <question>
+	  <type>shortanswer</type>
+      <text>What nmap scan would produce this type of traffic?</text>
+      <answer>Zombie Scan</answer>
+    </question>
+  </exercise>
+</exercises>

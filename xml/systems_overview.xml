@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Systems Overview</title>
+    <difficulty>1</difficulty>
+    <category>Analysis</category>
+    <name>systems_overview</name>
+    <dependencies>parse_google_news,base64_decoder,word_frequency,echo_client_server,collateral_duty_script</dependencies>
+    <shortdescription>Review of the common OS components for memory analysis.</shortdescription>
+    <description>This exercise covers the important aspects of the hardware architecture and common operating system components.</description>
+    <tutorial>&lt;p&gt;This exercise will cover common operating system components and hardware architectures, which will give you a decent baseline of knowledge for conducting memory analysis. It covers Chapter 1 in The Art of Memory Forensics, which you can access with your Safari Books Online Account.&lt;/p&gt;&#xD;
+&lt;p&gt;Review Chapter 1 and answer the questions below.&lt;/p&gt;</tutorial>
+    <question>
+      <text>What component assists the CPU in address translation?</text>
+      <type>multiple</type>
+      <answer>The Memory Management Unit (MMU)</answer>
+      <wrong>The Address Translation Unit (ATU)</wrong>
+      <wrong>The Central Memory Hub (CMH)</wrong>
+      <wrong>The Memory Management Controller (MMC)</wrong>
+    </question>
+    <question>
+      <text>When dealing with raw, padded memory dumps, a physical address is an offset into the memory dump file. </text>
+      <type>multiple</type>
+      <answer>True </answer>
+      <wrong>False</wrong>
+    </question>
+    <question>
+      <text>Which statement(s) are false?</text>
+      <type>multiple</type>
+      <answer>64-bit CPUs only actually use 52 bits of the available address space</answer>
+      <wrong>IA32 architecture is also known as x86</wrong>
+      <wrong>Physical Address Extension (PAE) allows up to 64GB of physical memory</wrong>
+      <wrong>A typical page size is 4KB, but it can be larger if the page size entry (PSE) flag is set</wrong>
+      <wrong>All of the above</wrong>
+    </question>
+    <question>
+      <text>Which CPU register is used to store the directory table base (page directory base)?</text>
+      <type>multiple</type>
+      <answer>CR3</answer>
+      <wrong>DR3</wrong>
+      <wrong>EAX</wrong>
+      <wrong>CR0 </wrong>
+    </question>
+    <question>
+      <text>Which statement(s) are true?</text>
+      <type>multiple</type>
+      <answer>All of the above</answer>
+      <wrong>Paging allows processes to "see" more RAM than is physically present </wrong>
+      <wrong>The page fault handler code must never be paged</wrong>
+      <wrong>Paging complicates memory forensics because not all data is memory resident at the time of acquisition</wrong>
+      <wrong>Paging writes potentially valuable volatile evidence to non-volatile storage such as disk</wrong>
+    </question>
+  </exercise>
+</exercises>

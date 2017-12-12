@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Dir 24 Hours</title>
+    <difficulty>3</difficulty>
+    <category>Programming</category>
+    <name>dir_24hrs</name>
+    <dependencies></dependencies>
+    <shortdescription>Script to show a system dir of 24hr +/-  of a Modified/Creation Date</shortdescription>
+    <description>Python Script to show you all files on a computer that have been modified or created within a 24 hour window of a given date.</description>
+    <tutorial>&lt;p&gt;Malware will often create or install other files when it is initially installed. Write a python script that takes a creation or modified date as an argument and returns all created or modified files on the system within a 24 hour period of the given date.&lt;/p&gt;&#xD;
+&lt;p&gt;Create the following command line options:&lt;/p&gt;&#xD;
+&lt;p&gt;-c : from creation date&lt;/p&gt;&#xD;
+&lt;p&gt;-m : from modified date&lt;/p&gt;&#xD;
+&lt;p&gt;-drive : specify which drive to do a full recursive dir. (default: C:\)&lt;/p&gt;&#xD;
+&lt;p&gt;Example: python&amp;nbsp;change_check.py -drive C:\ -c 2016-08-08&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p&gt;Helpful link:&lt;/p&gt;&#xD;
+&lt;p&gt;http://www.tutorialspoint.com/python/python_command_line_arguments.htm&lt;/p&gt;&#xD;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&#xD;
+&lt;p&gt;Email your code to adelphi-training-team@googlegroups.com for code review when you are finished.&lt;/p&gt;</tutorial>
+    <video>https://www.youtube.com/embed/ptoVoPCwYaQ</video>
+    <question>
+      <text>Enter your code below.</text>
+      <type>language</type>
+      <answer></answer>
+      <code>Python</code>
+    </question>
+    <question>
+      <text>What python do you need to import in order to parse through the command line arguments?</text>
+      <type>shortanswer</type>
+      <answer>argparse</answer>
+    </question>
+    <question>
+      <text>Take a screenshot of your code successfully working and upload the screenshot.</text>
+      <type>upload</type>
+      <answer></answer>
+    </question>
+  </exercise>
+</exercises>

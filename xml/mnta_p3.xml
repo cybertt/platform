@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Malicious Traffic Analysis - Part 3</title>
+    <difficulty>2</difficulty>
+    <category>Analysis</category>
+    <name>mnta_p3</name>
+    <dependencies>mnta_p2</dependencies>
+    <shortdescription>Analyze a pcap to figure out how a computer was infected.</shortdescription>
+    <description>Analyze a pcap to figure out how a computer was infected.</description>
+    <tutorial>&lt;p&gt;There is a pcap of traffic from an infected computer, in the share drive on your defensive workstation titled malicious_traffic_p3.pcap. Analyze the traffic, and figure out how the infection happened.&lt;/p&gt;&#xD;
+&lt;p&gt;Using Wireshark and answer the questions below.&lt;/p&gt;</tutorial>
+    <question>
+      <text>What is the infected computer's IP address?</text>
+      <type>shortanswer</type>
+      <answer>10.54.112.205</answer>
+    </question>
+    <question>
+      <text>What is the infected computer's MAC address?</text>
+      <type>shortanswer</type>
+      <answer>00:50:8b:01:db:2f</answer>
+    </question>
+    <question>
+      <text>What is the infected computer's host name?</text>
+      <type>shortanswer</type>
+      <answer>Pendjiek-PC</answer>
+    </question>
+    <question>
+      <text>What is the infected computer's operating system?</text>
+      <type>shortanswer</type>
+      <answer>Windows</answer>
+    </question>
+    <question>
+      <text>What is the date and time of the activity?</text>
+      <type>multiple</type>
+      <answer>9/22/15 from 22:41 UTC through 22:56 UTC</answer>
+      <wrong>9/22/15 from 22:32 UTC through 22:56 UTC</wrong>
+    </question>
+    <question>
+      <text>What is the SHA256 hash of the malware that infected the computer?</text>
+      <type>shortanswer</type>
+      <answer>8ba3149c7f9a8e2d1cdb55369e80e120e57401f699f71839035a0f8970c27459</answer>
+    </question>
+  </exercise>
+</exercises>

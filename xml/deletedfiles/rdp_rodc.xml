@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<exercises>
+  <exercise>
+    <title>Read Only Domain Controller (RODC)</title>
+    <difficulty>2</difficulty>
+    <category>CNE</category>
+    <name>rdp_rodc</name>
+    <dependencies>ssh_tunneling</dependencies>
+    <shortdescription>Enumerate a network using an RODC</shortdescription>
+    <description>Enumerate the network using an RODC</description>
+    <tutorial>&lt;ol&gt;&#xD;
+&lt;li&gt;Once you have gained access to a remote workstation, begin data mining user folders on the computer you might find some good information good places to check might be folders under c:\users\public such as downloads, documents, etc.&lt;/li&gt;&#xD;
+&lt;li&gt;Check out account details you might have found (what groups he is a member of on the domain), you might notice something interesting (HINT: use the "runas" command) tools: net user, netdom, dsquery, other net commands (see "net help")&lt;/li&gt;&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;Find the Read Only Domain Controller (RODC) in the target's DMZ&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&lt;li&gt;If you have done a port scan against the remote DMZ, you might notice a certain port open on the target's RODC that can be used for remote access. Log in with admin credentials through this interface.&lt;/li&gt;&#xD;
+&lt;li&gt;Enumerate the domain as a domain admin on the RODC. run a port scan on important infrastructure from the RODC, perhaps the RODC has less restricted firewall rules to certain important machines in the private network than other computers do.&lt;/li&gt;&#xD;
+&lt;/ol&gt;</tutorial>
+    <question>
+      <text>What did Maveric use too keep up foreign relations?</text>
+      <type>multiple</type>
+      <answer>The finger</answer>
+    </question>
+  </exercise>
+</exercises>
