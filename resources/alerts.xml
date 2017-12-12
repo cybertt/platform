@@ -1,0 +1,26 @@
+<alerts>
+	<alert>
+		<message>Stuck? Try out the new chat feature at the top of the page. Someone might be online to help you</message>
+		<severity>low</severity>
+	</alert>
+	<alert>
+		<message>If you find a bug in this application, report it with the "report bugs" feature ASAP so we can fix it!</message>
+		<severity>high</severity>
+	</alert>
+	<alert>
+		<message>If you are new to the N57 training environment, please complete the "Getting Started" exercise</message>
+		<severity>medium</severity>
+	</alert>
+	<alert>
+		<message>Exercises are being added and updated on an ongoing basis. Please be patient</message>
+		<severity>low</severity>
+	</alert>
+	<alert>
+		<message>The training workstations are in a secure, sandboxed environment. Feel free to "explore" and try new things</message>
+		<severity>low</severity>
+	</alert>
+	<alert>
+		<message>Welcome to the alert system</message>
+		<severity>high</severity>
+	</alert>
+</alerts>

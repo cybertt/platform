@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<categories>
+  <category>
+    <name>Informational</name>
+    <title>Help</title>
+    <longtitle>Informational and Introductory Exercises</longtitle>
+    <description>This sections contains activities designed to familiarize you with the environment</description>
+  </category>
+  <category>
+    <name>CNE</name>
+    <title>Computer Network Exploitation</title>
+    <longtitle>Computer Network Exploitation Skills</longtitle>
+    <description>Learn to perform exploitation against computer networks</description>
+  </category>
+  <category>
+    <name>CND</name>
+    <title>Computer Network Defense</title>
+    <longtitle>Computer Network Defense Skills</longtitle>
+    <description>Learn how to assess threats and perform defensive actions on computer networks</description>
+  </category>
+  <category>
+    <name>Analysis</name>
+    <title>Analysis and Reporting</title>
+    <longtitle>Detailed Analysis and Reporting Skills</longtitle>
+    <description>Learn to analyze reports and data</description>
+  </category>
+  <category>
+    <name>Programming</name>
+    <title>Programming</title>
+    <longtitle>Programming Skills</longtitle>
+    <description>Sharpen your programming skills by completing these exercises</description>
+  </category>
+  <category>
+    <name>Forensics</name>
+    <title>Forensics</title>
+    <longtitle>Forensics</longtitle>
+    <description>Learn reverse engineering and memory forensics</description>
+  </category>
+</categories>
