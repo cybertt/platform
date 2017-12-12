@@ -1,0 +1,131 @@
+body {
+	background: #336779 url('../resources/exercise_bg.jpg') no-repeat fixed center; 
+}
+
+.mainHeaderH2 {
+	margin:0px 0px -2% 0px; 
+	padding:15px 0px;
+	color:white;
+	background-color: #336779;
+	width:100%;
+	text-align:center;
+	font-family: "Century Gothic", sans-serif;
+}
+
+.mainDiv {
+	background-color: #ccc;
+	opacity: 0.7;
+	border-width:2px; 
+	border-style:outset; 
+	border-color:black; 
+	margin:10px 10% 0px 10%;
+	width:80%;
+	height: 100px;
+	border-radius:8px;
+	font-family: "Century Gothic", sans-serif;
+}
+
+.mainDiv:hover {
+	opacity:1.0;
+	transition-timing-function:linear;
+	
+}
+
+.suiteName {
+	display:inline-block; 
+	margin:0px 10px 5px 0px; 
+	width:140px; 
+	color:black;
+	vertical-align:middle; 
+	padding-left:15px;
+}
+
+.isNotAvailableText {
+	opacity:1.0;
+	display:inline-block; 
+	margin:5px 50px; 
+	width:450px; 
+	color:red; 
+	text-align: left;
+	vertical-align:middle;
+	padding-top:3px;
+}
+
+.launchableButton {
+	display:inline-block; 
+	margin:5px 50px 5px 10px; 
+	height:40px; 
+	width:80px; 
+	vertical-align:middle;
+}
+
+.isNotAvailableButton {
+	background-color:red; 
+	margin:5px 10px 5px 50px; 
+	vertical-align:middle; 
+	height:40px; 
+	color:white; 
+	border-radius:10px; 
+	width:130px;
+}
+
+.isAvailableText {
+	opacity:1.0;
+	display:inline-block;
+	margin:5px 50px; 
+	width:450px; 
+	text-align:left;
+	vertical-align:middle; 
+	color:green;
+	padding-top:3px;
+}
+
+.notLaunchableButton {
+	display:inline-block;
+	margin:5px 50px 5px 10px; 
+	width:80px; 
+	height:40px; 
+	vertical-align:middle;
+}
+
+.isAvailableButton {
+	background-color:green; 
+	border-radius:10px; 
+	vertical-align:middle; 
+	color:white; 
+	margin:5px 10px 5px 50px; 
+	height:40px; 
+	width:130px;
+}
+
+.para {
+	text-align:right;
+	margin-top:-10px;
+	
+}
+
+.linksep{
+	display:inline-block;
+	color:780000;
+	margin:0px;
+}
+
+.toplinks{
+	width: 100%; 
+	height:30px; 
+	position:float; 
+	text-align:left; 
+	background-color:#888; 
+	margin-top:2%; 
+	color:white;
+	font-size:.65em;
+	vertical-align:center;
+	padding-top:3px;
+	font-family: "Century Gothic", sans-serif;
+}
+
+a {
+	text-decoration:none;
+	color:white;
+	vertical-align:center;
+}

@@ -1,0 +1,21 @@
+.panel-dark {
+  border-color: #0c7868;
+}
+.panel-dark > .panel-heading {
+  color: #fff;
+  background-color: #0c7868;
+  border-color: #0c7868;
+}
+.panel-dark > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #0c7868;
+}
+.panel-dark > .panel-heading .badge {
+  color: #0c7868;
+  background-color: #fff;
+}
+.panel-dark > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #0c7868;
+}
+.panel-dark {
+  border-color: #d6e9c6;
+}

@@ -1,0 +1,105 @@
+body { 
+	background-color: #f3f3f3;
+	font-family:Century Gothic, sans-serif;
+}
+
+.center-align {
+    margin: 0 auto;
+    float: none;
+}
+
+#banner1 {
+    position: static;
+    background-color: white;
+    color: rgb(30,70,155); 
+    padding: 3% 0;
+    margin: 0;
+    text-align: center;
+    font-weight: 100;
+}
+
+.navbar1 {
+ /*   background-color: rgb(21,126,169);
+    border-top: solid 2px white;
+    border-bottom: solid 4px rgba(0,0,0,.3); */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,207cca+49,2989d8+50,1e5799+100 */
+	background: #7db9e8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7db9e8 0%, #207cca 49%, #2989d8 50%, #1e5799 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #7db9e8 0%,#207cca 49%,#2989d8 50%,#1e5799 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #7db9e8 0%,#207cca 49%,#2989d8 50%,#1e5799 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+
+}
+
+.navbar1-fixed-top { position: relative; }
+.navbar1-inverse .navbar1-nav > li > a, .navbar1-inverse .navbar1-brand { color: white; }
+.navbar1-inverse .navbar1-nav > li > a:hover, .navbar1-inverse .navbar1-brand { color: blue; }
+
+/* Test */
+/* Rectangle Out */
+.hvr-rectangle-out {
+  color:003333;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: #e1e1e1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+
+.hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
+  color: white;
+}
+.hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.hvr-rectangle-out1 {
+  color:003333;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: #e1e1e1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.wrapper{
+	margin:10px; 
+	width:33%; 
+	max-width:280px; 
+	height:370px; 
+	background-color:white; 
+	font-size:25px;
+}
+
+.completed{
+	font-weight:600;
+	font-size:18px;
+	position: absolute;
+	margin 0 auto;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.container{
+	text-align:center;
+}
